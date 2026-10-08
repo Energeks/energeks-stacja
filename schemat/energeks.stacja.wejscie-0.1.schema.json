@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://energeks-stacje-api.energeks.workers.dev/schemat/energeks.stacja.wejscie-0.1.schema.json",
+  "title": "Parametry wejściowe stacji SN/nN (energeks.stacja/0.1)",
+  "description": "Parametry konfiguracji stacji. Pole bez podania przyjmuje wartość domyślną silnika. Dopuszczalne wartości mocy i odpływów zależą od linii (plik opcji).",
+  "type": "object",
+  "properties": {
+    "linia": {
+      "enum": [
+        "B",
+        "E",
+        "F"
+      ],
+      "description": "B stacja odbiorcza kontenerowa, E stacja dla e-mobilności, F stacja słupowa"
+    },
+    "moc": {
+      "type": "integer",
+      "enum": [
+        63,
+        100,
+        160,
+        250,
+        400,
+        630,
+        800,
+        1000,
+        1250,
+        1600,
+        2000,
+        2500
+      ],
+      "description": "moc transformatora w kVA"
+    },
+    "liczbaTrafo": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "kV": {
+      "enum": [
+        15,
+        20
+      ],
+      "description": "napięcie sieci SN w kV"
+    },
+    "trafoTyp": {
+      "enum": [
+        "olejowy",
+        "suchy"
+      ]
+    },
+    "izolacja": {
+      "enum": [
+        "s",
+        "g",
+        "p"
+      ],
+      "description": "s stało-powietrzna, g gazowa bez fluorowanych gazów cieplarnianych, p powietrzna; zawsze bez F-gazów (rozporządzenie (UE) 2024/573)"
+    },
+    "polaL": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "poleL": {
+      "enum": [
+        "L",
+        "W"
+      ]
+    },
+    "pomiar": {
+      "enum": [
+        "SN",
+        "nN"
+      ]
+    },
+    "poleT": {
+      "enum": [
+        "R",
+        "W"
+      ],
+      "description": "R rozłącznik z bezpiecznikami, W wyłącznik"
+    },
+    "odplywy": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 16
+    },
+    "rezerwaOdp": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 22
+    },
+    "odplywWlk": {
+      "enum": [
+        "NH00",
+        "NH1",
+        "NH2",
+        "NH3"
+      ]
+    },
+    "obsluga": {
+      "enum": [
+        "wewnetrzna",
+        "zewnetrzna"
+      ]
+    },
+    "obudowaSzer": {
+      "enum": [
+        2550,
+        2960,
+        null
+      ]
+    },
+    "rei120": {
+      "type": "boolean"
+    },
+    "agregat": {
+      "type": "boolean"
+    },
+    "ppoz": {
+      "type": "boolean"
+    },
+    "analizator": {
+      "type": "boolean"
+    },
+    "kompJalowy": {
+      "type": "boolean"
+    },
+    "zaciski": {
+      "enum": [
+        "TOC-1",
+        "TOC-2",
+        "brak"
+      ]
+    },
+    "mocDocelowa": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "telemechanika": {
+      "enum": [
+        "brak",
+        "przygotowanie",
+        "FPI",
+        "sterowanie"
+      ]
+    },
+    "osd": {
+      "enum": [
+        "brak",
+        "PGE",
+        "Tauron",
+        "Enea",
+        "Energa",
+        "Stoen"
+      ]
+    },
+    "przejecieOSD": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

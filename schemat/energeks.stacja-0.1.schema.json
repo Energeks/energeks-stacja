@@ -1,0 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://energeks-stacje-api.energeks.workers.dev/schemat/energeks.stacja-0.1.schema.json",
+  "title": "Dane konfiguracji stacji SN/nN, energeks.stacja/0.1",
+  "description": "Dane konfiguracji z kreatora, generatora i API. Programy muszą ignorować pola, których nie znają (nowe pola mogą dojść w wersji 0.x).",
+  "type": "object",
+  "required": [
+    "schemat_danych",
+    "silnik",
+    "kod",
+    "nazwa",
+    "linia",
+    "parametry_wejsciowe",
+    "dane",
+    "wyposazenie",
+    "liczby"
+  ],
+  "properties": {
+    "schemat_danych": {
+      "const": "energeks.stacja/0.1"
+    },
+    "wygenerowano": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "generator": {
+      "type": "string"
+    },
+    "silnik": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+"
+    },
+    "producent": {
+      "type": "object",
+      "properties": {
+        "marka": {
+          "type": "string"
+        },
+        "nazwa": {
+          "type": "string"
+        },
+        "adres": {
+          "type": "string"
+        },
+        "nip": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "tel": {
+          "type": "string"
+        },
+        "www": {
+          "type": "string"
+        },
+        "sklep": {
+          "type": "string"
+        }
+      }
+    },
+    "kod": {
+      "type": "string",
+      "pattern": "^ENG-(?:[BE](?:2x)?\\d{3,4}Z?-(?:15|20)[SGP](?:20)?-[LWPTV]+|F\\d{2,3}-(?:15|20)-PB)-\\d{2}(?:\\+\\d{2})?(?:-(?=[KSRAPMQCDNT])K?S?R?A?P?M?Q?(?:C[02])?(?:D\\d{3,4})?(?:N(?:00|1|2|3))?(?:T[123])?)?(?:-(?:TAURON|ENEA|ENERGA|PGE|STOEN|OSD))?$"
+    },
+    "nazwa": {
+      "type": "string"
+    },
+    "linia": {
+      "type": "string"
+    },
+    "wejscie": {
+      "$ref": "energeks.stacja.wejscie-0.1.schema.json"
+    },
+    "postepowanie": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opcje_dodatkowe": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "grupa": {
+            "type": "string"
+          },
+          "wartosc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "parametry_wejsciowe": {
+      "type": "object",
+      "required": [
+        "linia",
+        "moc",
+        "liczbaTrafo",
+        "kV",
+        "trafoTyp",
+        "odplywy",
+        "telemechanika",
+        "osd",
+        "przejecieOSD"
+      ],
+      "properties": {
+        "linia": {
+          "enum": [
+            "B",
+            "E",
+            "F"
+          ],
+          "description": "B stacja odbiorcza kontenerowa, E stacja dla e-mobilności, F stacja słupowa"
+        },
+        "moc": {
+          "type": "integer",
+          "enum": [
+            63,
+            100,
+            160,
+            250,
+            400,
+            630,
+            800,
+            1000,
+            1250,
+            1600,
+            2000,
+            2500
+          ],
+          "description": "moc transformatora w kVA"
+        },
+        "liczbaTrafo": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "kV": {
+          "enum": [
+            15,
+            20
+          ],
+          "description": "napięcie sieci SN w kV"
+        },
+        "trafoTyp": {
+          "enum": [
+            "olejowy",
+            "suchy"
+          ]
+        },
+        "izolacja": {
+          "enum": [
+            "s",
+            "g",
+            "p"
+          ],
+          "description": "s stało-powietrzna, g gazowa bez fluorowanych gazów cieplarnianych, p powietrzna; zawsze bez F-gazów (rozporządzenie (UE) 2024/573)"
+        },
+        "polaL": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "poleL": {
+          "enum": [
+            "L",
+            "W"
+          ]
+        },
+        "pomiar": {
+          "enum": [
+            "SN",
+            "nN",
+            "AMI"
+          ]
+        },
+        "poleT": {
+          "enum": [
+            "R",
+            "W"
+          ],
+          "description": "R rozłącznik z bezpiecznikami, W wyłącznik"
+        },
+        "odplywy": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 16
+        },
+        "rezerwaOdp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 22
+        },
+        "odplywWlk": {
+          "enum": [
+            "NH00",
+            "NH1",
+            "NH2",
+            "NH3"
+          ]
+        },
+        "obsluga": {
+          "enum": [
+            "wewnetrzna",
+            "zewnetrzna"
+          ]
+        },
+        "obudowaSzer": {
+          "enum": [
+            2550,
+            2960,
+            null
+          ]
+        },
+        "rei120": {
+          "type": "boolean"
+        },
+        "agregat": {
+          "type": "boolean"
+        },
+        "ppoz": {
+          "type": "boolean"
+        },
+        "analizator": {
+          "type": "boolean"
+        },
+        "kompJalowy": {
+          "type": "boolean"
+        },
+        "zaciski": {
+          "enum": [
+            "TOC-1",
+            "TOC-2",
+            "MK 5",
+            "brak"
+          ]
+        },
+        "mocDocelowa": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "telemechanika": {
+          "enum": [
+            "brak",
+            "przygotowanie",
+            "FPI",
+            "sterowanie"
+          ]
+        },
+        "osd": {
+          "enum": [
+            "brak",
+            "PGE",
+            "Tauron",
+            "Enea",
+            "Energa",
+            "Stoen"
+          ]
+        },
+        "przejecieOSD": {
+          "type": "boolean"
+        },
+        "auto": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "blokady": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "rezerwaMin": {
+          "type": "integer"
+        },
+        "rezerwaMax": {
+          "type": "integer"
+        },
+        "zaciskiMozliwe": {
+          "type": "boolean"
+        }
+      },
+      "description": "parametry po normalizacji przez silnik: jak wejście, plus pomiar AMI (stacja przekazywana OSD), zaciski MK 5 (moc docelowa od 800 kVA), pola auto i blokady"
+    },
+    "dane": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parametr": {
+            "type": "string"
+          },
+          "wartosc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "parametry": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "grupa": {
+            "type": "string"
+          },
+          "wiersze": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "parametr": {
+                  "type": "string"
+                },
+                "wartosc": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "wyposazenie": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sekcja",
+          "pozycje"
+        ],
+        "properties": {
+          "sekcja": {
+            "type": "string"
+          },
+          "pozycje": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nazwa": {
+                  "type": "string"
+                },
+                "opis": {
+                  "type": "string"
+                },
+                "dobierane_do_mocy": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "zalezne_od_mocy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parametr": {
+            "type": "string"
+          },
+          "wartosc": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "liczby": {
+      "type": "object",
+      "description": "prądy w A, prądy zwarciowe w kA, przekroje w mm2, misa w l, moce w kVA",
+      "properties": {
+        "InSN": {
+          "type": "number"
+        },
+        "InNN": {
+          "type": "number"
+        },
+        "IkObl": {
+          "type": "number"
+        },
+        "ipObl": {
+          "type": "number"
+        },
+        "Icw": {
+          "type": "number"
+        },
+        "Ipk": {
+          "type": "number"
+        },
+        "wkl": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ctSN": {
+          "type": "number"
+        },
+        "ctNN": {
+          "type": "number"
+        },
+        "aparatA": {
+          "type": "number"
+        },
+        "kabel": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "połączenie transformator nN: n kabli na fazę o przekroju s mm2; null przy połączeniu szynowym"
+        },
+        "misaL": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "przekrojSN": {
+          "type": "number"
+        },
+        "Sd": {
+          "type": "number"
+        }
+      }
+    },
+    "obudowa": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "wymiary w mm, masy w t",
+      "properties": {
+        "typ": {
+          "type": "string"
+        },
+        "nazwa": {
+          "type": "string"
+        },
+        "L": {
+          "type": "number"
+        },
+        "szer": {
+          "type": "number"
+        },
+        "z": {
+          "type": "object"
+        },
+        "masy": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "pola": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "L",
+              "W",
+              "P",
+              "T",
+              "V"
+            ]
+          }
+        }
+      }
+    },
+    "uwagi": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "poziom": {
+            "enum": [
+              "info",
+              "uwaga",
+              "blad"
+            ]
+          },
+          "tekst": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "normy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "norma": {
+            "type": "string"
+          },
+          "zakres": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dokumenty": {
+      "type": "object"
+    },
+    "certyfikaty_w_pakiecie": {
+      "type": "array"
+    },
+    "braki": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "zastrzezenie": {
+      "type": "string"
+    },
+    "projekt_techniczny": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
