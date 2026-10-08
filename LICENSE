@@ -1,0 +1,19 @@
+Kod i dane stacji SN/nN, format energeks.stacja/0.1
+Copyright (c) 2026 Transformatory Sp. z o.o. (Energeks)
+
+Specyfikacja, schematy JSON, wyrażenie regularne kodu, przykłady i testy w tym repozytorium
+są udostępnione na licencji Creative Commons Uznanie autorstwa 4.0 Międzynarodowe (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/legalcode.pl
+
+Przy wykorzystaniu należy podać źródło, np.: "Format energeks.stacja (Energeks), CC BY 4.0".
+
+Licencja nie obejmuje nazwy, znaku towarowego ani logo Energeks, MarkoEco2, TeoEco2 ani innych
+oznaczeń Energeks; nie obejmuje też silnika konfiguratora (reguł doboru), generatora dokumentów
+ani kreatora stacji, które pozostają własnością Transformatory Sp. z o.o.
+
+----
+
+Specification, JSON schemas, code regular expression, examples and tests in this repository are
+licensed under Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/legalcode
+The Energeks name, trademarks and logos and the configurator engine are not covered by this licence.
