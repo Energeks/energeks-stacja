@@ -1,0 +1,922 @@
+{
+ "schemat_danych": "energeks.stacja/0.1",
+ "wygenerowano": "2026-10-08",
+ "generator": "0.5",
+ "silnik": "0.8.2",
+ "producent": {
+  "marka": "Energeks",
+  "nazwa": "Transformatory Sp. z o.o.",
+  "adres": "ul. Święty Marcin 29/8, 61-806 Poznań",
+  "nip": "7831867805",
+  "email": "info@energeks.com",
+  "tel": "+48 664 951 947",
+  "www": "www.energeks.pl",
+  "sklep": "energeks.shop"
+ },
+ "kod": "ENG-B630-15S-LPT-06-K",
+ "nazwa": "Stacja transformatorowa kontenerowa 630 kVA 15/0,4 kV z pomiarem SN",
+ "linia": "Stacja odbiorcza kontenerowa",
+ "wejscie": {
+  "linia": "B",
+  "moc": 630,
+  "kV": 15,
+  "izolacja": "s",
+  "polaL": 1,
+  "poleL": "L",
+  "pomiar": "SN",
+  "poleT": "R",
+  "odplywy": 6,
+  "rezerwaOdp": 0,
+  "obsluga": "wewnetrzna",
+  "rei120": false,
+  "agregat": false,
+  "ppoz": false,
+  "analizator": false,
+  "kompJalowy": false,
+  "odplywWlk": "NH2",
+  "telemechanika": "brak"
+ },
+ "postepowanie": null,
+ "opcje_dodatkowe": [],
+ "parametry_wejsciowe": {
+  "linia": "B",
+  "auto": {
+   "zaciski": true
+  },
+  "osd": "brak",
+  "przejecieOSD": false,
+  "liczbaTrafo": 1,
+  "moc": 630,
+  "kV": 15,
+  "trafoTyp": "olejowy",
+  "mocDocelowa": null,
+  "zaciskiMozliwe": true,
+  "zaciski": "TOC-1",
+  "izolacja": "s",
+  "pomiar": "SN",
+  "polaL": 1,
+  "poleL": "L",
+  "telemechanika": "brak",
+  "obsluga": "wewnetrzna",
+  "rei120": false,
+  "agregat": false,
+  "ppoz": false,
+  "analizator": false,
+  "kompJalowy": false,
+  "obudowaSzer": null,
+  "odplywy": 6,
+  "rezerwaOdp": 0,
+  "rezerwaMin": 0,
+  "rezerwaMax": 18,
+  "odplywWlk": "NH2",
+  "poleT": "R",
+  "blokady": {}
+ },
+ "dane": [
+  {
+   "parametr": "Napięcie sieci SN",
+   "wartosc": "15 kV (urządzenia 24 kV)"
+  },
+  {
+   "parametr": "Moc",
+   "wartosc": "630 kVA, transformator olejowy"
+  },
+  {
+   "parametr": "Prąd SN przy 15 kV",
+   "wartosc": "24,2 A"
+  },
+  {
+   "parametr": "Prąd nN przy 400 V",
+   "wartosc": "909 A"
+  },
+  {
+   "parametr": "Zwarcie na szynach nN",
+   "wartosc": "Ik ok. 15 kA, ip ok. 36 kA; szyny Icw 20 kA/1 s"
+  },
+  {
+   "parametr": "Rozdzielnica SN",
+   "wartosc": "L + P + T z bezpiecznikami, 16 kA/1 s, stało-powietrzna"
+  },
+  {
+   "parametr": "Pomiar",
+   "wartosc": "rozliczeniowy SN, przekładniki 25/5 A"
+  },
+  {
+   "parametr": "Straty transformatora",
+   "wartosc": "P0 540 W, Pk 4600 W (Tier 2), uk 6%"
+  },
+  {
+   "parametr": "Masa transformatora",
+   "wartosc": "ok. 1800 kg, wymiary ok. 1450 x 900 x 1540 mm"
+  },
+  {
+   "parametr": "Olej w transformatorze",
+   "wartosc": "ok. 360 kg (ok. 409 l)"
+  },
+  {
+   "parametr": "Osprzęt transformatora",
+   "wartosc": "zaciski nN Energeks TOC-1 M30 z osłonami OZNN M30"
+  },
+  {
+   "parametr": "Obudowa",
+   "wartosc": "obudowa betonowa KSW 2,55 x 4,00 m z korytarzem obsługi, wysokość 3,72 m z piwnicą kablową (nad terenem ok. 2,82 m), masa obudowy ok. 20,7 t"
+  },
+  {
+   "parametr": "Dostawa",
+   "wartosc": "transport; rozładunek i montaż po stronie klienta"
+  },
+  {
+   "parametr": "Czas realizacji",
+   "wartosc": "18 tygodni"
+  }
+ ],
+ "parametry": [
+  {
+   "grupa": "Dane znamionowe",
+   "wiersze": [
+    {
+     "parametr": "Napięcie znamionowe sieci SN",
+     "wartosc": "15 kV"
+    },
+    {
+     "parametr": "Napięcie znamionowe urządzeń SN",
+     "wartosc": "24 kV"
+    },
+    {
+     "parametr": "Napięcie strony nN",
+     "wartosc": "0,4 kV (transformator 0,42 kV w stanie jałowym)"
+    },
+    {
+     "parametr": "Częstotliwość",
+     "wartosc": "50 Hz"
+    },
+    {
+     "parametr": "Moc znamionowa",
+     "wartosc": "630 kVA"
+    },
+    {
+     "parametr": "Prąd znamionowy strony SN",
+     "wartosc": "24,2 A"
+    },
+    {
+     "parametr": "Prąd znamionowy strony nN (400 V)",
+     "wartosc": "909 A"
+    },
+    {
+     "parametr": "Wytrzymałość zwarciowa SN",
+     "wartosc": "16 kA/1 s"
+    },
+    {
+     "parametr": "Zwarcie na szynach nN",
+     "wartosc": "Ik ok. 15 kA, ip ok. 36 kA (PN-EN 60909-0, sieć SN sztywna)"
+    },
+    {
+     "parametr": "Szyny nN",
+     "wartosc": "Icw 20 kA/1 s, Ipk 40 kA, prąd szyn 1250 A"
+    }
+   ]
+  },
+  {
+   "grupa": "Obudowa",
+   "wiersze": [
+    {
+     "parametr": "Typ",
+     "wartosc": "betonowa KSW 2,55 x 4,00 m, z wewnętrznym korytarzem obsługi i piwnicą kablową"
+    },
+    {
+     "parametr": "Wymiary zewnętrzne",
+     "wartosc": "2,55 x 4,00 m"
+    },
+    {
+     "parametr": "Wysokość",
+     "wartosc": "3,72 m z piwnicą kablową, nad terenem ok. 2,82 m"
+    },
+    {
+     "parametr": "Wnętrze",
+     "wartosc": "2,31 x 3,76 m, wysokość 2,45 m"
+    },
+    {
+     "parametr": "Piwnica kablowa",
+     "wartosc": "2,51 x 3,96 m, wysokość 0,88 m w świetle"
+    },
+    {
+     "parametr": "Komora transformatora",
+     "wartosc": "1,40 m w świetle; drzwi 1,17 m w ścianie frontowej, żaluzja 0,88 m w ścianie tylnej"
+    },
+    {
+     "parametr": "Korytarz obsługi",
+     "wartosc": "ok. 1,27 m; drzwi obsługi 0,95 m w ścianie frontowej"
+    },
+    {
+     "parametr": "Dach",
+     "wartosc": "betonowy, płaski, spadek ok. 2%"
+    },
+    {
+     "parametr": "Powierzchnia zabudowy",
+     "wartosc": "10,2 m2"
+    },
+    {
+     "parametr": "Klasa obudowy (PN-EN 62271-202)",
+     "wartosc": "10"
+    },
+    {
+     "parametr": "Łuk wewnętrzny",
+     "wartosc": "IAC-AB 16 kA 1 s"
+    },
+    {
+     "parametr": "Stopień ochrony",
+     "wartosc": "IP43, IK10"
+    },
+    {
+     "parametr": "Posadowienie",
+     "wartosc": "zagłębienie ok. 0,90 m na podsypce 0,10 m"
+    },
+    {
+     "parametr": "Misa olejowa",
+     "wartosc": "min. 409 l"
+    },
+    {
+     "parametr": "Masy elementów (poglądowe)",
+     "wartosc": "korpus ok. 12 t, fundament z piwnicą ok. 5,4 t, dach ok. 3,3 t; razem ok. 20,7 t bez aparatury"
+    }
+   ]
+  },
+  {
+   "grupa": "Transformator",
+   "wiersze": [
+    {
+     "parametr": "Typ",
+     "wartosc": "Transformator olejowy hermetyczny MarkoEco2 630 kVA 15,75/0,42 kV Dyn5"
+    },
+    {
+     "parametr": "Straty i napięcie zwarcia",
+     "wartosc": "P0 540 W, Pk 4600 W (Tier 2), uk 6%"
+    },
+    {
+     "parametr": "Masa i wymiary",
+     "wartosc": "ok. 1800 kg, wymiary ok. 1450 x 900 x 1540 mm"
+    },
+    {
+     "parametr": "Olej",
+     "wartosc": "ok. 360 kg (ok. 409 l)"
+    },
+    {
+     "parametr": "Zabezpieczenie",
+     "wartosc": "Termometr ze stykami: sygnalizacja i wyłączenie przez wyzwalacz łącznika w polu T"
+    }
+   ]
+  },
+  {
+   "grupa": "Osprzęt transformatora Energeks",
+   "wiersze": [
+    {
+     "parametr": "Zaciski nN",
+     "wartosc": "Energeks TOC-1 M30: 3 x TOC-1/U (DP 5300) i 1 x TOC-1/N (DP 5300N); poziome, bezkońcówkowe, 1000 A; gniazda 2 x 95-240 mm2 (Al lub Cu) i 2 x 2,5-50 mm2 na ograniczniki, pomiar i potrzeby własne; korpus z odkuwki mosiężnej ocynowanej, śruby mocujące ze stali nierdzewnej, dociskowe z mosiądzu; zacisk /N z przyłączem uziemienia roboczego; PN-EN 60947-7-1; do transformatorów MarkoEco2; karty katalogowe 5-65/15 i 6-65/15; energeks.shop/zacisk-transformatorowy-toc-1.html"
+    },
+    {
+     "parametr": "Osłony zacisków nN",
+     "wartosc": "Energeks OZNN M30; osłony zacisków nN z elastycznego tworzywa samogasnącego, zakładane po podłączeniu kabli; energeks.shop/oslona-izolacyjna-oznn.html"
+    }
+   ]
+  },
+  {
+   "grupa": "Rozdzielnica SN",
+   "wiersze": [
+    {
+     "parametr": "Układ pól",
+     "wartosc": "L + P + T z bezpiecznikami, 16 kA/1 s, stało-powietrzna"
+    },
+    {
+     "parametr": "Pole transformatorowe",
+     "wartosc": "rozłącznik z bezpiecznikami HH 40 A"
+    },
+    {
+     "parametr": "Pole pomiarowe",
+     "wartosc": "przekładniki prądowe 25/5 A kl. 0,2S; Ith 16 kA/1 s; przekładniki napięciowe 15/√3 / 0,1/√3 / 0,1/3 kV kl. 0,2 lub 0,5 (wg kategorii układu w IRiESD), z bezpiecznikami SN"
+    },
+    {
+     "parametr": "Połączenie z transformatorem",
+     "wartosc": "3 x XRUHAKXS 1x70/16 mm2 12/20 kV z głowicami lub konektorami"
+    }
+   ]
+  },
+  {
+   "grupa": "Rozdzielnica nN",
+   "wiersze": [
+    {
+     "parametr": "Aparat główny",
+     "wartosc": "rozłącznik izolacyjny 1250 A; na transformator 630 kVA, prąd 909 A przy 400 V; zapas na przeciążenie transformatora"
+    },
+    {
+     "parametr": "Szyny",
+     "wartosc": "Szyny 1250 A, Icw 20 kA/1 s, Ipk 40 kA; prąd zwarciowy początkowy ok. 15 kA, udarowy ok. 36 kA (sieć SN sztywna, PN-EN 60909-0)"
+    },
+    {
+     "parametr": "Odpływy",
+     "wartosc": "6 odpływów z rozłącznikami bezpiecznikowymi NH2 400 A; wkładki dobiera projektant z zachowaniem selektywności z bezpiecznikami SN; rezerwa miejsca na kolejne odpływy"
+    },
+    {
+     "parametr": "Ochrona przepięciowa",
+     "wartosc": "Ograniczniki przepięć nN typu 1+2"
+    },
+    {
+     "parametr": "Połączenie z transformatorem",
+     "wartosc": "2 x 4 x YKXS 1x240 mm2, 2 kable na fazę i N"
+    }
+   ]
+  },
+  {
+   "grupa": "Pomiar",
+   "wiersze": [
+    {
+     "parametr": "Pomiar rozliczeniowy po stronie SN (pośredni)",
+     "wartosc": "przekładniki prądowe 25/5 A kl. 0,2S i napięciowe w polu P; szafka licznikowa z listwą probierczą, miejscem na licznik i modem OSD oraz zasilaniem rezerwowym (UPS); przekładnia ostatecznie wg warunków przyłączenia"
+    }
+   ]
+  },
+  {
+   "grupa": "Warunki pracy",
+   "wiersze": [
+    {
+     "parametr": "Warunki normalne",
+     "wartosc": "wg PN-EN 62271-1: temperatura otoczenia od -25 do +40 st. C, wysokość do 1000 m n.p.m., wiatr do 34 m/s; potwierdzane certyfikatem stacji"
+    },
+    {
+     "parametr": "Miejsce pracy",
+     "wartosc": "na zewnątrz, w gruncie (posadowienie wg projektu)"
+    }
+   ]
+  },
+  {
+   "grupa": "Producent",
+   "wiersze": [
+    {
+     "parametr": "Producent",
+     "wartosc": "Transformatory Sp. z o.o. (marka Energeks), ul. Święty Marcin 29/8, 61-806 Poznań, NIP 7831867805"
+    },
+    {
+     "parametr": "Typ",
+     "wartosc": "Stacja transformatorowa kontenerowa 630 kVA 15/0,4 kV z pomiarem SN"
+    },
+    {
+     "parametr": "Numer katalogowy",
+     "wartosc": "ENG-B630-15S-LPT-06-K; cena na zapytanie, czas realizacji 18 tygodni"
+    }
+   ]
+  }
+ ],
+ "wyposazenie": [
+  {
+   "sekcja": "Obudowa",
+   "pozycje": [
+    {
+     "nazwa": "Obudowa betonowa KSW 2,55 x 4,00 m z korytarzem obsługi",
+     "opis": "wymiary zewnętrzne 2,55 x 4,00 m, wysokość 3,72 m z piwnicą kablową (nad terenem ok. 2,82 m); wnętrze 2,31 x 3,76 m, wysokość 2,45 m; komora transformatora 1,40 m w świetle, drzwi transformatora 1,17 m i drzwi obsługi 0,95 m w ścianie frontowej; klasa obudowy 10 wg PN-EN 62271-202, IAC-AB 16 kA 1 s, IP43, IK10; masy poglądowe: korpus ok. 12 t, fundament z piwnicą ok. 5,4 t, dach ok. 3,3 t",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Fundament z piwnicą kablową",
+     "opis": "prefabrykat z betonu samozagęszczalnego, misa olejowa wydzielona przegrodą w piwnicy, przepusty kablowe; posadowienie na podsypce 0,1 m, zagłębienie ok. 0,90 m",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Misa olejowa min. 409 l",
+     "opis": "na pełną ilość oleju transformatora MarkoEco2 630 kVA",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Wentylacja grawitacyjna i ogrzewanie antykondensacyjne",
+     "opis": "żaluzje z siatką, grzałka z termostatem w przedziale SN",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Blokady",
+     "opis": "kluczowa blokada drzwi komory transformatora z uziemnikiem pola T, blokady mechaniczne rozdzielnicy SN",
+     "dobierane_do_mocy": false
+    }
+   ]
+  },
+  {
+   "sekcja": "Rozdzielnica SN",
+   "pozycje": [
+    {
+     "nazwa": "Rozdzielnica SN 24 kV, szyny 630 A, 16 kA/1 s",
+     "opis": "izolacja stało-powietrzna, IAC AFL 16 kA 1 s, wskaźniki napięcia LRM, uziemniki",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Pole liniowe L: rozłącznik 630 A z uziemnikiem",
+     "opis": "przyłącza kablowe typu C; głowice kabli liniowych po stronie wykonawcy",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Pole pomiarowe P: przekładniki prądowe 25/5 A kl. 0,2S",
+     "opis": "Ith 16 kA/1 s; przekładniki napięciowe 15/√3 / 0,1/√3 / 0,1/3 kV kl. 0,2 lub 0,5 (wg kategorii układu w IRiESD), z bezpiecznikami SN",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Pole transformatorowe T: rozłącznik z bezpiecznikami HH 40 A",
+     "opis": "wkładki 24 kV ze zbijakiem, dobór typowy, ostatecznie wg tabeli producenta rozdzielnicy SN (PN-EN 62271-105); wyzwalacz od zabezpieczenia temperaturowego transformatora; uziemniki obustronne",
+     "dobierane_do_mocy": true
+    }
+   ]
+  },
+  {
+   "sekcja": "Transformator",
+   "pozycje": [
+    {
+     "nazwa": "Transformator olejowy hermetyczny MarkoEco2 630 kVA 15,75/0,42 kV Dyn5",
+     "opis": "straty Tier 2: P0 540 W, Pk 4600 W, uk 6%, odczepy ±3 x 2,5%, uzwojenia Al, masa ok. 1800 kg",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Termometr ze stykami",
+     "opis": "sygnalizacja i wyłączenie przez wyzwalacz łącznika w polu T",
+     "dobierane_do_mocy": true
+    }
+   ]
+  },
+  {
+   "sekcja": "Osprzęt transformatora Energeks",
+   "pozycje": [
+    {
+     "nazwa": "Zaciski nN Energeks TOC-1 M30: 3 x TOC-1/U (DP 5300) i 1 x TOC-1/N (DP 5300N)",
+     "opis": "poziome, bezkońcówkowe, 1000 A; gniazda 2 x 95-240 mm2 (Al lub Cu) i 2 x 2,5-50 mm2 na ograniczniki, pomiar i potrzeby własne; korpus z odkuwki mosiężnej ocynowanej, śruby mocujące ze stali nierdzewnej, dociskowe z mosiądzu; zacisk /N z przyłączem uziemienia roboczego; PN-EN 60947-7-1; do transformatorów MarkoEco2; karty katalogowe 5-65/15 i 6-65/15; energeks.shop/zacisk-transformatorowy-toc-1.html",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "4 osłony izolacyjne nN Energeks OZNN M30",
+     "opis": "osłony zacisków nN z elastycznego tworzywa samogasnącego, zakładane po podłączeniu kabli; energeks.shop/oslona-izolacyjna-oznn.html",
+     "dobierane_do_mocy": true
+    }
+   ]
+  },
+  {
+   "sekcja": "Połączenia",
+   "pozycje": [
+    {
+     "nazwa": "Połączenie rozdzielnicy SN z transformatorem",
+     "opis": "3 x XRUHAKXS 1x70/16 mm2 12/20 kV z głowicami lub konektorami",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Połączenie transformatora z rozdzielnicą nN",
+     "opis": "2 x 4 x YKXS 1x240 mm2, 2 kable na fazę i N",
+     "dobierane_do_mocy": true
+    }
+   ]
+  },
+  {
+   "sekcja": "Rozdzielnica nN",
+   "pozycje": [
+    {
+     "nazwa": "Aparat główny: rozłącznik izolacyjny 1250 A",
+     "opis": "na transformator 630 kVA, prąd 909 A przy 400 V; zapas na przeciążenie transformatora",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Szyny 1250 A, Icw 20 kA/1 s, Ipk 40 kA",
+     "opis": "prąd zwarciowy początkowy ok. 15 kA, udarowy ok. 36 kA (sieć SN sztywna, PN-EN 60909-0)",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "6 odpływów z rozłącznikami bezpiecznikowymi NH2 400 A",
+     "opis": "wkładki dobiera projektant z zachowaniem selektywności z bezpiecznikami SN; rezerwa miejsca na kolejne odpływy",
+     "dobierane_do_mocy": true
+    },
+    {
+     "nazwa": "Ograniczniki przepięć nN typu 1+2",
+     "opis": "",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Rozdzielnica potrzeb własnych",
+     "opis": "oświetlenie, gniazdo 230 V z wyłącznikiem różnicowoprądowym 30 mA, grzałka",
+     "dobierane_do_mocy": false
+    }
+   ]
+  },
+  {
+   "sekcja": "Pomiar",
+   "pozycje": [
+    {
+     "nazwa": "Pomiar rozliczeniowy po stronie SN (pośredni)",
+     "opis": "przekładniki prądowe 25/5 A kl. 0,2S i napięciowe w polu P; szafka licznikowa z listwą probierczą, miejscem na licznik i modem OSD oraz zasilaniem rezerwowym (UPS); przekładnia ostatecznie wg warunków przyłączenia",
+     "dobierane_do_mocy": true
+    }
+   ]
+  },
+  {
+   "sekcja": "Uziemienie, BHP i dokumenty",
+   "pozycje": [
+    {
+     "nazwa": "Główna szyna uziemiająca i połączenia wyrównawcze",
+     "opis": "konstrukcja, drzwi, punkt neutralny transformatora; zaciski do uziomu otokowego (uziom po stronie wykonawcy, wg projektu i PN-EN 50522)",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Tablice ostrzegawcze i schemat stacji",
+     "opis": "wg wymagań OSD i instrukcji eksploatacji",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Sprzęt ochronny (opcja)",
+     "opis": "chodnik izolacyjny, rękawice dielektryczne, wskaźnik napięcia SN, drążek izolacyjny, uchwyt do wkładek NH, gaśnica",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Dokumentacja",
+     "opis": "DTR z instrukcją transportu, rozładunku i posadowienia; certyfikat badań typu PN-EN 62271-202 z zastosowaną rozdzielnicą SN; protokoły prób wyrobu; deklaracje zgodności rozdzielnic (PN-EN 62271-200, PN-EN 61439); karta prób transformatora (PN-EN 60076) i deklaracja Ecodesign; schemat jednokreskowy",
+     "dobierane_do_mocy": false
+    }
+   ]
+  },
+  {
+   "sekcja": "Dostawa",
+   "pozycje": [
+    {
+     "nazwa": "Transport na miejsce wskazane przez klienta",
+     "opis": "załadunek po stronie Energeks, rozładunek (dźwig lub HDS) po stronie klienta",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Transformator",
+     "opis": "zamontowany w stacji, jeśli pozwala na to masa transportowa; w przeciwnym razie osobnym transportem, a jego wstawienie i podłączenie po stronie klienta (do uzgodnienia)",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Czas realizacji 18 tygodni",
+     "opis": "od zamówienia; wersje 20 kV i niestandardowe mogą wymagać dłuższego terminu",
+     "dobierane_do_mocy": false
+    },
+    {
+     "nazwa": "Poza zakresem dostawy",
+     "opis": "projekt i uzgodnienia, rozładunek, wykop i posadowienie, uziom i jego pomiar, kable SN i nN z głowicami, montaż, przyłączenie, pomiary pomontażowe, nastawy zabezpieczeń, odbiory: po stronie klienta lub jego wykonawcy",
+     "dobierane_do_mocy": false
+    }
+   ]
+  }
+ ],
+ "zalezne_od_mocy": [
+  {
+   "parametr": "Transformator",
+   "wartosc": "630 kVA"
+  },
+  {
+   "parametr": "Pole transformatora",
+   "wartosc": "HH 40 A"
+  },
+  {
+   "parametr": "Prąd nN",
+   "wartosc": "909 A"
+  },
+  {
+   "parametr": "Aparat główny nN",
+   "wartosc": "rozłącznik 1250 A"
+  },
+  {
+   "parametr": "Szyny nN",
+   "wartosc": "Icw 20 kA, ip 36 kA"
+  },
+  {
+   "parametr": "Odpływy",
+   "wartosc": "6 x NH2"
+  },
+  {
+   "parametr": "Zaciski nN",
+   "wartosc": "TOC-1 M30 + OZNN M30"
+  },
+  {
+   "parametr": "Przekładniki",
+   "wartosc": "25/5 A SN"
+  },
+  {
+   "parametr": "Kable do nN",
+   "wartosc": "2 x 240 mm2 Cu na fazę"
+  },
+  {
+   "parametr": "Kabel SN",
+   "wartosc": "1x70 mm2 Al"
+  },
+  {
+   "parametr": "Misa olejowa",
+   "wartosc": "409 l"
+  },
+  {
+   "parametr": "Obudowa",
+   "wartosc": "KSW 2,55 x 4,00 m"
+  }
+ ],
+ "liczby": {
+  "InSN": 24.248711305964285,
+  "InSNc": 24.248711305964285,
+  "InNN": 909.3266739736606,
+  "IkNN": 14.986977517406796,
+  "ipNN": 35.99726126855259,
+  "IkObl": 14.986977517406796,
+  "ipObl": 35.99726126855259,
+  "Icw": 20,
+  "Ipk": 40,
+  "wkl": 40,
+  "ctSN": 25,
+  "ctNN": 1000,
+  "aparatA": 1250,
+  "kabel": {
+   "n": 2,
+   "s": 240
+  },
+  "naDocelowy": false,
+  "misaL": 409,
+  "przekrojSN": 70,
+  "Sd": 630,
+  "InNNd": 909.3266739736606,
+  "qKomp": null,
+  "ctTech": 1000
+ },
+ "obudowa": {
+  "typ": "KSW",
+  "rodzina": "KSW2550",
+  "wariant": "C",
+  "L": 4000,
+  "szer": 2550,
+  "sc": 120,
+  "z": {
+   "dno": 120,
+   "posadzka": 1000,
+   "podloga": 1150,
+   "sufit": 3600,
+   "dach": 3720,
+   "teren": 900,
+   "podsypka": 100
+  },
+  "wysWewn": 2450,
+  "n": 1,
+  "K": 1400,
+  "rei": false,
+  "komory": [
+   {
+    "x0": 120,
+    "x1": 1520,
+    "strona": "D",
+    "przegroda": 1520,
+    "drzwi": {
+     "x0": 250,
+     "x1": 1420
+    },
+    "zaluzja": {
+     "x0": 400,
+     "x1": 1280
+    },
+    "zaluzjaBok": null,
+    "cx": 820,
+    "cy": 1275
+   }
+  ],
+  "rnn": [
+   {
+    "x0": 1530,
+    "x1": 1830,
+    "y0": 1120,
+    "y1": 2020,
+    "orient": "prost"
+   }
+  ],
+  "drzwiO": [
+   {
+    "x0": 2340,
+    "x1": 3290
+   }
+  ],
+  "rnnRzedy": 2,
+  "rnnLen": 900,
+  "rsn": {
+   "x0": 1840,
+   "x1": 3640,
+   "y0": 160,
+   "y1": 1160,
+   "orient": "C",
+   "pola": [
+    {
+     "kod": "L",
+     "w": 500,
+     "a0": 1840,
+     "a1": 2340,
+     "f": {
+      "typ": "L",
+      "nr": 1
+     }
+    },
+    {
+     "kod": "P",
+     "w": 800,
+     "a0": 2340,
+     "a1": 3140,
+     "f": {
+      "typ": "P"
+     }
+    },
+    {
+     "kod": "T",
+     "w": 500,
+     "a0": 3140,
+     "a1": 3640,
+     "f": {
+      "typ": "T",
+      "nr": 1,
+      "aparat": "R"
+     }
+    }
+   ],
+   "W": 1800
+  },
+  "wlaz": {
+   "x0": 2707.5,
+   "x1": 3232.5,
+   "y0": 1432.5,
+   "y1": 2157.5
+  },
+  "korytarz": 1270,
+  "masy": {
+   "korpus": 12,
+   "fundament": 5.4,
+   "dach": 3.3,
+   "suma": 20.7,
+   "dwuczesciowe": false
+  },
+  "nazwa": "KSW 2,55 x 4,00 m",
+  "plik": null,
+  "pola": [
+   "L",
+   "P",
+   "T"
+  ],
+  "trafo": {
+   "S": 630,
+   "n": 1,
+   "wym": [
+    1450,
+    900,
+    1540
+   ],
+   "suchy": false,
+   "Sd": 630
+  },
+  "odplywy": 6,
+  "rezerwa": 0,
+  "wlk": "NH2",
+  "ppoz": false,
+  "osprzet": {
+   "zaciski": "TOC-1",
+   "gwint": "M30",
+   "I": 1000,
+   "szynowe": false,
+   "dpU": "5300",
+   "dpN": "5300N",
+   "karty": "5-65/15 i 6-65/15",
+   "oslona": "OZNN M30",
+   "zgu": false,
+   "oip": false,
+   "sklep": "energeks.shop/zacisk-transformatorowy-toc-1.html"
+  },
+  "rsnLen": 1800,
+  "dodatki": []
+ },
+ "uwagi": [
+  {
+   "poziom": "info",
+   "tekst": "Rozdzielnica SN bez F-gazów: od 1.01.2026 rozporządzenie UE 2024/573 zakazuje oddawania do eksploatacji rozdzielnic SN do 24 kV z gazami fluorowanymi (z wąskimi wyjątkami)."
+  },
+  {
+   "poziom": "info",
+   "tekst": "Obudowa KSW 2,55 x 4,00 m dobrana wstępnie do aparatury: rozdzielnica SN 1,80 m wzdłuż ściany tylnej, rozdzielnica nN ok. 0,90 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,27 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
+  }
+ ],
+ "normy": [
+  {
+   "norma": "PN-EN 62271-202",
+   "zakres": "stacje prefabrykowane wysokiego napięcia na niskie napięcie"
+  },
+  {
+   "norma": "PN-EN 62271-200",
+   "zakres": "rozdzielnice prądu przemiennego w osłonach metalowych od 1 kV do 52 kV"
+  },
+  {
+   "norma": "PN-EN 62271-1",
+   "zakres": "wspólne postanowienia dla aparatury rozdzielczej i sterowniczej"
+  },
+  {
+   "norma": "PN-EN 62271-105",
+   "zakres": "zestawy rozłącznikowo-bezpiecznikowe"
+  },
+  {
+   "norma": "PN-EN 61439-1, PN-EN 61439-5",
+   "zakres": "rozdzielnice niskonapięciowe, w tym do sieci publicznych"
+  },
+  {
+   "norma": "PN-EN 60947-3",
+   "zakres": "rozłączniki i rozłączniki bezpiecznikowe nN"
+  },
+  {
+   "norma": "PN-EN 60076-1, PN-EN 50588-1",
+   "zakres": "transformatory mocy, transformatory średniej mocy do 36 kV"
+  },
+  {
+   "norma": "Rozporządzenie Komisji (UE) 548/2014 z 2019/1783",
+   "zakres": "ekoprojekt transformatorów, poziom strat Tier 2"
+  },
+  {
+   "norma": "Rozporządzenie (UE) 2024/573",
+   "zakres": "fluorowane gazy cieplarniane: rozdzielnica SN bez F-gazów"
+  },
+  {
+   "norma": "PN-EN 60909-0",
+   "zakres": "obliczenia prądów zwarciowych (dobór szyn i aparatów nN)"
+  },
+  {
+   "norma": "PN-EN 50522, PN-HD 60364",
+   "zakres": "uziemienia i instalacje (w projekcie wykonawcy)"
+  }
+ ],
+ "dokumenty": {
+  "w_pakiecie": [
+   {
+    "plik": "01_Projekt_techniczny_ENG-B630-15S-LPT-06-K.pdf",
+    "nazwa": "Projekt techniczny (PDF)",
+    "opis": "dokumentacja typowa do adaptacji w układzie projektu technicznego stacji: strona tytułowa, spis treści w 38 punktach, opis, obliczenia, zestawienie montażowe i 9 arkuszy rysunków A3"
+   },
+   {
+    "plik": "02_Rysunki_ENG-B630-15S-LPT-06-K",
+    "nazwa": "Rysunki A3 (SVG)",
+    "opis": "arkusze E-1 do E-9 z tabliczką Energeks, wektorowe, do edycji w programach CAD i graficznych"
+   },
+   {
+    "plik": "03_Karta_katalogowa_ENG-B630-15S-LPT-06-K.pdf",
+    "nazwa": "Karta katalogowa (PDF)",
+    "opis": "parametry, wyposażenie, normy i wykaz dokumentów; w pliku osadzone dane konfiguracji (JSON)"
+   },
+   {
+    "plik": "04_Schemat_jednokreskowy_ENG-B630-15S-LPT-06-K.pdf",
+    "nazwa": "Schemat jednokreskowy poglądowy (PDF, SVG)",
+    "opis": "arkusz A4 do oferty, wersja wektorowa SVG"
+   },
+   {
+    "plik": "05_Rzut_ENG-B630-15S-LPT-06-K.svg",
+    "nazwa": "Rzut poglądowy (SVG, PNG)",
+    "opis": "rozmieszczenie aparatury w obudowie KSW 2,55 x 4,00 m"
+   },
+   {
+    "plik": "07_Opis_techniczny_ENG-B630-15S-LPT-06-K.docx",
+    "nazwa": "Opis techniczny (DOCX)",
+    "opis": "edytowalny opis stacji do oferty i projektu"
+   },
+   {
+    "plik": "08_Zestawienie_ENG-B630-15S-LPT-06-K.xlsx",
+    "nazwa": "Zestawienie materiałów i parametry (XLSX)",
+    "opis": "wyposażenie, parametry, dokumenty, uwagi"
+   },
+   {
+    "plik": "09_Dane_ENG-B630-15S-LPT-06-K.json",
+    "nazwa": "Dane konfiguracji (JSON)",
+    "opis": "do programów, kosztorysów i agentów AI"
+   },
+   {
+    "plik": "00_Spis_dokumentow.txt",
+    "nazwa": "Spis dokumentów (TXT)",
+    "opis": "co jest w pakiecie i czego jeszcze brakuje"
+   }
+  ],
+  "producentow": [
+   {
+    "dokument": "Certyfikat zgodności stacji (badania typu PN-EN 62271-202)",
+    "zakres": "z jednostki akredytowanej, z listą typów rozdzielnic SN i nN dopuszczonych w stacji"
+   },
+   {
+    "dokument": "Certyfikaty lub raporty z badań komponentów",
+    "zakres": "rozdzielnica SN (PN-EN 62271-200), rozdzielnica nN (PN-EN 61439-1 i -5), rozłączniki nN (PN-EN 60947-3)"
+   },
+   {
+    "dokument": "Deklaracje zgodności",
+    "zakres": "stacji: wystawia Energeks jako producent; komponentów: ich producenci; wg PN-EN ISO/IEC 17050-1"
+   },
+   {
+    "dokument": "Transformator",
+    "zakres": "karta katalogowa, deklaracja zgodności, deklaracja zgodności z wymaganiami ekoprojektu (Tier 2); karta prób przy dostawie"
+   },
+   {
+    "dokument": "Obudowa",
+    "zakres": "opinia o klasie odporności ogniowej, oświadczenie o szczelności i odporności misy olejowej na olej"
+   },
+   {
+    "dokument": "Przy dostawie",
+    "zakres": "DTR stacji w języku polskim (papier i PDF), protokół prób wyrobu, karta gwarancyjna, schemat do zawieszenia w stacji"
+   }
+  ]
+ },
+ "certyfikaty_w_pakiecie": [],
+ "braki": [
+  "Rysunki konstrukcyjne obudowy KSW 2,55 x 4,00 m (DXF) i punkty zawiesia: od producenta obudowy po zamówieniu.",
+  "Typy aparatów na schemacie (rozdzielnica SN i nN, rozłączniki, wkładki): po wyborze dostawców rozdzielnic.",
+  "Warunki środowiskowe potwierdzone certyfikatem stacji."
+ ],
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie."
+}
