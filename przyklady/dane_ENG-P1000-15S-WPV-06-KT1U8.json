@@ -1,8 +1,8 @@
 {
  "schemat_danych": "energeks.stacja/0.2",
  "wygenerowano": "2026-10-14",
- "generator": "0.6",
- "silnik": "0.10.0",
+ "generator": "0.7",
+ "silnik": "0.10.1",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -918,5 +918,14 @@
   "Typy aparatów na schemacie (rozdzielnica SN i nN, rozłączniki, wkładki): po wyborze dostawców rozdzielnic.",
   "Warunki środowiskowe potwierdzone certyfikatem stacji."
  ],
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie."
+ "cena": {
+  "tryb": "zapytanie",
+  "waluta": "PLN",
+  "netto": true,
+  "transport_w_cenie": true,
+  "cennik": "0.4.0",
+  "cennik_data": "2026-10-14",
+  "opis": "Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
+ },
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
 }

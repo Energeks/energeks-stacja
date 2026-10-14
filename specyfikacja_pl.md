@@ -1,6 +1,6 @@
 # Kod i dane stacji SN/nN, format energeks.stacja/0.2
 
-Wersja specyfikacji 0.2 (wydanie 0.2.0), 14.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.10.0. Kody i dane w wersji 0.1 pozostają ważne (punkt 6).
+Wersja specyfikacji 0.2 (wydanie 0.2.1), 14.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.10.1. Kody i dane w wersji 0.1 pozostają ważne (punkt 6).
 
 ## 1. Cel i zakres
 
@@ -11,7 +11,7 @@ Specyfikacja opisuje dwie rzeczy, które pozwalają jednoznacznie przekazać kon
 
 Ten sam kod działa w adresie strony (`https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#KOD`), w ofercie, w zapytaniu, w dokumentach i w API. Dane JSON są osadzane w karcie katalogowej PDF (załącznik `dane_<kod>.json`) i pobierane z kreatora.
 
-Specyfikacja nie opisuje reguł doboru aparatury (to robi silnik) ani cen.
+Specyfikacja nie opisuje reguł doboru aparatury (to robi silnik) ani sposobu wyceny; od wydania 0.2.1 dane mogą nieść cenę stacji (pole `cena`, punkt 5).
 
 ## 2. Pojęcia
 
@@ -169,6 +169,7 @@ Obiekt JSON opisany schematem `schemat/energeks.stacja-0.2.schema.json` (dane we
 | `normy` | lista `{norma, zakres}` | normy i przepisy wynikające z konfiguracji |
 | `dokumenty` | obiekt | pliki w pakiecie i dokumenty producentów |
 | `braki` | lista tekstów | czego brakuje do kompletu dokumentów |
+| `cena` | obiekt albo null (od 0.2.1, opcjonalne) | cena netto w PLN z transportem w Polsce, potwierdzana w ofercie: `tryb` `cena` (`cena_pln`), `widelki` (`od_pln`, `do_pln`, stacja nietypowa albo pozycje szacowane) albo `zapytanie`; `cennik` i `cennik_data` to wersja cennika, `opis` to zdanie do pokazania |
 | `zastrzezenie` | tekst | zastrzeżenie o charakterze poglądowym |
 
 Jednostki: moce w kVA, napięcia w kV, prądy w A, prądy zwarciowe w kA, wymiary obudowy w mm, masy w t, objętości w l. Teksty w `dane`, `parametry` i `wyposazenie` są po polsku i służą ludziom; programy powinny czytać `parametry_wejsciowe`, `liczby` i `obudowa`.

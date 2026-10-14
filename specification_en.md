@@ -1,6 +1,6 @@
 # MV/LV substation code and data, format energeks.stacja/0.2
 
-Specification version 0.2 (release 0.2.0), 14 October 2026. Reference engine: Energeks substation configurator, engine 0.10.0. Codes and data of version 0.1 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
+Specification version 0.2 (release 0.2.1), 14 October 2026. Reference engine: Energeks substation configurator, engine 0.10.1. Codes and data of version 0.1 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
 
 ## 1. Purpose and scope
 
@@ -9,7 +9,7 @@ This specification defines two things that let people, programs and AI assistant
 1. the **substation code**, a short string such as `ENG-B630-15S-LPT-06-K` from which the full configuration can be rebuilt,
 2. the **configuration data** as JSON, format `energeks.stacja/0.2`: input parameters, calculated values, equipment, standards and documents.
 
-The same code works in a web address (`https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#CODE`), in an offer, in an enquiry, in documents and in the API. The JSON data is embedded in the PDF datasheet (attachment `dane_<code>.json`) and can be downloaded from the configurator. Selection rules (done by the engine) and prices are out of scope.
+The same code works in a web address (`https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#CODE`), in an offer, in an enquiry, in documents and in the API. The JSON data is embedded in the PDF datasheet (attachment `dane_<code>.json`) and can be downloaded from the configurator. Selection rules (done by the engine) and the pricing method are out of scope; from release 0.2.1 the data may carry the substation price (field `cena`: `tryb` cena, widelki or zapytanie, net PLN including transport within Poland, confirmed in the offer).
 
 ## 2. Terms
 

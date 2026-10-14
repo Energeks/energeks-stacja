@@ -1,8 +1,8 @@
 {
  "schemat_danych": "energeks.stacja/0.2",
  "wygenerowano": "2026-10-14",
- "generator": "0.6",
- "silnik": "0.10.0",
+ "generator": "0.7",
+ "silnik": "0.10.1",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -370,7 +370,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B400-15S-LLT-06-KP-PGE; cena na zapytanie"
+     "wartosc": "ENG-B400-15S-LLT-06-KP-PGE; cena 261 800 zł netto"
     }
    ]
   }
@@ -960,5 +960,15 @@
   "Typy aparatów na schemacie (rozdzielnica SN i nN, rozłączniki, wkładki): po wyborze dostawców rozdzielnic.",
   "Warunki środowiskowe potwierdzone certyfikatem stacji."
  ],
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie."
+ "cena": {
+  "tryb": "cena",
+  "waluta": "PLN",
+  "netto": true,
+  "transport_w_cenie": true,
+  "cennik": "0.4.0",
+  "cennik_data": "2026-10-14",
+  "cena_pln": 261800,
+  "opis": "Cena: 261 800 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+ },
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 261 800 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
 }

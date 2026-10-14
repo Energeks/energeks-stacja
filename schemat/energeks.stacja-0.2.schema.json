@@ -550,6 +550,62 @@
     },
     "projekt_techniczny": {
       "type": "object"
+    },
+    "cena": {
+      "description": "Cena stacji (od wydania 0.2.1, kreator 1.9): netto w PLN z transportem w Polsce, z cennika Energeks, potwierdzana w ofercie. Tryb cena: cena_pln; widelki: od_pln i do_pln (stacja nietypowa albo pozycje szacowane); zapytanie: bez kwoty. Pole opcjonalne, dane bez niego są poprawne.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "tryb"
+      ],
+      "properties": {
+        "tryb": {
+          "enum": [
+            "cena",
+            "widelki",
+            "zapytanie"
+          ]
+        },
+        "cena_pln": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "od_pln": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "do_pln": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "waluta": {
+          "const": "PLN"
+        },
+        "netto": {
+          "const": true
+        },
+        "transport_w_cenie": {
+          "const": true
+        },
+        "cennik": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cennik_data": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opis": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": true

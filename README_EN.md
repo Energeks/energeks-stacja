@@ -4,7 +4,7 @@ Polski: [README.md](README.md).
 
 One short code, e.g. `ENG-B630-15S-LPT-06-K`, describes a complete MV/LV transformer substation: line (prefabricated concrete, e-mobility, pole-mounted, photovoltaics), power, voltage, MV switchgear panels, LV outgoing ways, options and the grid operator standard (Poland, 6, 10, 15 and 20 kV networks). The same code works in a web address, in an offer, in a tender, in documents and in programs. The configuration data in JSON (`energeks.stacja/0.2`) carries input parameters, calculated values, equipment, standards and documents.
 
-Release 0.2.0 (14 October 2026), reference engine 0.10.0. History: [CHANGELOG.md](CHANGELOG.md) (English summary in each entry).
+Release 0.2.1 (14 October 2026), reference engine 0.10.1. History: [CHANGELOG.md](CHANGELOG.md) (English summary in each entry).
 
 ## Contents
 
