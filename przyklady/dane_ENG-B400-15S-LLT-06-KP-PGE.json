@@ -1,8 +1,8 @@
 {
- "schemat_danych": "energeks.stacja/0.2",
+ "schemat_danych": "energeks.stacja/0.3",
  "wygenerowano": "2026-10-14",
  "generator": "0.7",
- "silnik": "0.10.1",
+ "silnik": "0.11.0",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -47,8 +47,10 @@
   },
   "osd": "PGE",
   "przejecieOSD": true,
+  "wnetrzowa": false,
   "liczbaTrafo": 1,
   "moc": 400,
+  "mocSpoza": false,
   "kV": 15,
   "ikSN": 16,
   "unn": 0.4,
@@ -71,6 +73,8 @@
   "analizator": false,
   "kompJalowy": false,
   "obudowaSzer": null,
+  "ups": false,
+  "szr": "brak",
   "odplywy": 6,
   "rezerwaOdp": 0,
   "rezerwaMin": 0,
@@ -699,7 +703,7 @@
     "x0": 1530,
     "x1": 1830,
     "y0": 165,
-    "y1": 1665,
+    "y1": 1865,
     "orient": "prost"
    }
   ],
@@ -710,7 +714,7 @@
    }
   ],
   "rnnRzedy": 2,
-  "rnnLen": 1500,
+  "rnnLen": 1700,
   "rsn": {
    "x0": 3047,
    "x1": 4047,
@@ -826,7 +830,7 @@
   },
   {
    "poziom": "info",
-   "tekst": "Obudowa KSW 2,55 x 4,20 m dobrana wstępnie do aparatury: rozdzielnica SN 1,50 m przy ścianie szczytowej, rozdzielnica nN ok. 1,50 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,22 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
+   "tekst": "Obudowa KSW 2,55 x 4,20 m dobrana wstępnie do aparatury: rozdzielnica SN 1,50 m przy ścianie szczytowej, rozdzielnica nN ok. 1,70 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,22 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
   }
  ],
  "normy": [
@@ -885,7 +889,7 @@
    {
     "plik": "02_Rysunki_ENG-B400-15S-LLT-06-KP-PGE",
     "nazwa": "Rysunki A3 (SVG)",
-    "opis": "arkusze E-1 do E-9 z tabliczką Energeks, wektorowe, do edycji w programach CAD i graficznych"
+    "opis": "arkusze E-01 do E-09 z tabliczką Energeks, pliki nazwane kodem stacji i numerem arkusza, wektorowe, do edycji w programach CAD i graficznych"
    },
    {
     "plik": "03_Karta_katalogowa_ENG-B400-15S-LLT-06-KP-PGE.pdf",

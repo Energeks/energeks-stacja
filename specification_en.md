@@ -1,13 +1,13 @@
-# MV/LV substation code and data, format energeks.stacja/0.2
+# MV/LV substation code and data, format energeks.stacja/0.3
 
-Specification version 0.2 (release 0.2.1), 14 October 2026. Reference engine: Energeks substation configurator, engine 0.10.1. Codes and data of version 0.1 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
+Specification version 0.3 (release 0.3.0), 14 October 2026. Reference engine: Energeks substation configurator, engine 0.11.0. Codes and data of versions 0.1 and 0.2 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
 
 ## 1. Purpose and scope
 
 This specification defines two things that let people, programs and AI assistants exchange the configuration of a prefabricated or pole-mounted MV/LV transformer substation (6, 10, 15 and 20 kV networks, transformers 63 to 2500 kVA and 2 x 400 to 2 x 1000 kVA, LV side 0.4 kV or 0.8 kV in substations for photovoltaics) without ambiguity:
 
 1. the **substation code**, a short string such as `ENG-B630-15S-LPT-06-K` from which the full configuration can be rebuilt,
-2. the **configuration data** as JSON, format `energeks.stacja/0.2`: input parameters, calculated values, equipment, standards and documents.
+2. the **configuration data** as JSON, format `energeks.stacja/0.3`: input parameters, calculated values, equipment, standards and documents.
 
 The same code works in a web address (`https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#CODE`), in an offer, in an enquiry, in documents and in the API. The JSON data is embedded in the PDF datasheet (attachment `dane_<code>.json`) and can be downloaded from the configurator. Selection rules (done by the engine) and the pricing method are out of scope; from release 0.2.1 the data may carry the substation price (field `cena`: `tryb` cena, widelki or zapytanie, net PLN including transport within Poland, confirmed in the offer).
 
@@ -34,13 +34,13 @@ ENG-{line}{2x}{power}{Z}-{kV}{insulation}{Ik}-{MV panels}-{outgoing}[+{spare}][-
 | `ENG` | fixed | format prefix |
 | line | `B`, `E`, `F`, `P` | substation type |
 | `2x` | optional | two transformers (line B: 400 to 1000 kVA, line E: 630 to 1000 kVA) |
-| power | number | rated power of one transformer in kVA (B: 100 to 2500, E: 630 to 2500, F: 63 to 630, P: 100 to 2500) |
+| power | number | rated power of one transformer in kVA, an integer (from 0.3: B and P 25 to 2500, E 630 to 2500, F 25 to 630; with `2x` standard ratings only); outside the standard range the transformer is made to order |
 | `Z` | optional | dry-type (cast resin) transformer; otherwise oil-immersed |
 | kV | `6`, `10`, `15`, `20` | MV network voltage; equipment rated 12 kV for 6 and 10 kV, 24 kV for 15 and 20 kV |
 | insulation | `S`, `G`, `P` | MV switchgear insulation without F-gases: S solid and air, G gas without fluorinated greenhouse gases, P air; none for pole-mounted |
 | Ik | optional `20` or `25` | MV network short-circuit current in kA/1 s when other than 16 (Stoen network 20 kA; for 6 and 10 kV selectable 16, 20 or 25 kA, default 20 kA); otherwise 16 kA/1 s |
 | MV panels | `L`, `W`, `P`, `T`, `V` or `PB` | MV panels from the left: L line with switch-disconnector, W line with circuit breaker, P metering, T transformer with fuses, V transformer with circuit breaker; `PB` pole-mounted |
-| outgoing | 2 digits | number of LV outgoing feeders (per section with two transformers) |
+| outgoing | 2 digits | number of LV outgoing feeders, `01` to `24` (pole-mounted up to `06`; per section with two transformers) |
 | `+spare` | 2 digits | number of LV spare ways; together with feeders max. 24 (pole-mounted 6) |
 | options | fixed order, see 3.2 | equipment and design |
 | DSO | `TAURON`, `ENEA`, `ENERGA`, `PGE`, `STOEN`, `OSD` | substation handed over to the operator (built to its standard); `OSD` for another operator |
@@ -49,6 +49,7 @@ ENG-{line}{2x}{power}{Z}-{kV}{insulation}{Ik}-{MV panels}-{outgoing}[+{spare}][-
 
 | Code | Meaning |
 |---|---|
+| `I` | indoor substation without enclosure, installed in the customer's room; instead of `K`, `S` and `R`, no DSO suffix (from 0.3); without `Z` in the power segment the transformer is oil-immersed |
 | `K` | internal operation (service corridor); without `K` external operation |
 | `S` | 2.96 m wide enclosure with corridor for up to 630 kVA (default 2.55 m) |
 | `R` | REI 120 fire resistance |
@@ -58,19 +59,21 @@ ENG-{line}{2x}{power}{Z}-{kV}{insulation}{Ik}-{MV panels}-{outgoing}[+{spare}][-
 | `Q` | no-load reactive power compensation (when not required by the DSO standard) |
 | `W` | circuit breaker with overcurrent release as the LV main device up to 630 kVA (from 0.2; above 630 kVA always a circuit breaker, no letter) |
 | `X` | no metering in the substation: billing metering elsewhere, private substation or behind existing metering (from 0.2) |
+| `Y` | UPS 230 V AC in the auxiliary distribution board (from 0.3) |
 | `C2` | compact LV transformer terminals (TOC-2) instead of default ones (TOC-1) |
 | `C0` | no LV terminals from the substation supplier (terminals by the purchaser) |
 | `D` and power | substation prepared for a larger transformer, e.g. `D1000` |
 | `N00`, `N1`, `N2`, `N3` | outgoing fuse switch size other than the line default |
 | `T1`, `T2`, `T3` | remote control: preparation, fault passage indicators, full remote control |
-| `U8` | LV side 0.8 kV, IT system with insulation monitoring (line P, from 0.2) |
+| `Z1`, `Z2`, `Z3` | automatic transfer switching: Z1 LV transformer and generator (requires `A`), Z2 LV between two sections (requires `2x`), Z3 MV between two incoming lines (at least two line panels); from 0.3 |
+| `U5`, `U69`, `U8`, `U10` | LV side 0.5, 0.69, 0.8 or 1.0 kV, IT system with insulation monitoring, MV metering (`U8` from 0.2 in line P; from 0.3 all in lines B, E and P) |
 
 ### 3.3 Regular expression (syntax)
 
 A canonical code matches:
 
 ```
-^ENG-(?:[BEP](?:2x)?\d{3,4}Z?-(?:6|10|15|20)[SGP](?:20|25)?-[LWPTV]+|F\d{2,3}-(?:6|10|15|20)-PB)-\d{2}(?:\+\d{2})?(?:-(?=[KSRAPMQWXCDNTU])K?S?R?A?P?M?Q?W?X?(?:C[02])?(?:D\d{3,4})?(?:N(?:00|1|2|3))?(?:T[123])?(?:U8)?)?(?:-(?:TAURON|ENEA|ENERGA|PGE|STOEN|OSD))?$
+^ENG-(?:[BEP](?:2x)?\d{2,4}Z?-(?:6|10|15|20)[SGP](?:20|25)?-[LWPTV]+|F\d{2,3}-(?:6|10|15|20)-PB)-\d{2}(?:\+\d{2})?(?:-(?=[IKSRAPMQWXYCDNTZU])I?K?S?R?A?P?M?Q?W?X?Y?(?:C[02])?(?:D\d{3,4})?(?:N(?:00|1|2|3))?(?:T[123])?(?:Z[123])?(?:U(?:5|69|8|10))?)?(?:-(?:TAURON|ENEA|ENERGA|PGE|STOEN|OSD))?$
 ```
 
 Checked by automated tests against the full sample of codes from the reference engine (all match). The expression checks syntax only: a syntactically valid code may contradict the selection rules (e.g. `C2` with a target power of 800 kVA or more). The engine decides (3.5).
@@ -90,11 +93,11 @@ See the table in the Polish text and `przyklady/kody.json` (32 codes with names,
 
 ## 4. Input parameters
 
-Schema `schemat/energeks.stacja.wejscie-0.2.schema.json`; fields: `linia`, `moc`, `liczbaTrafo`, `kV`, `ikSN`, `unn`, `aparatNN`, `trafoTyp`, `izolacja`, `polaL`, `poleL`, `pomiar`, `poleT`, `odplywy`, `rezerwaOdp`, `odplywWlk`, `obsluga`, `obudowaSzer`, `rei120`, `agregat`, `ppoz`, `analizator`, `kompJalowy`, `zaciski`, `mocDocelowa`, `telemechanika`, `osd`, `przejecieOSD`. Field names and values are Polish (they are part of the format). A missing field takes the engine default. Allowed values per line and operator: options file (`opcje.json`, API `GET /opcje`).
+Schema `schemat/energeks.stacja.wejscie-0.3.schema.json`; fields: `linia`, `moc` (an integer within the line range from 0.3), `liczbaTrafo`, `kV`, `ikSN`, `unn`, `aparatNN`, `trafoTyp`, `izolacja`, `polaL`, `poleL`, `pomiar`, `poleT`, `odplywy`, `rezerwaOdp`, `odplywWlk`, `obsluga`, `obudowaSzer`, `rei120`, `agregat`, `ppoz`, `analizator`, `kompJalowy`, `zaciski`, `mocDocelowa`, `telemechanika`, `osd`, `przejecieOSD`, and from 0.3 `ups` (`Y`), `szr` (`brak`, `nN-agregat`, `nN-sprzeglo`, `SN`; `Z1` to `Z3`), `obudowa` (`brak`: indoor, `I`); `unn` 0.4, 0.5, 0.69, 0.8 or 1; `odplywy` 1 to 24. Field names and values are Polish (they are part of the format). A missing field takes the engine default. Allowed values per line and operator: options file (`opcje.json`, API `GET /opcje`).
 
-## 5. Configuration data energeks.stacja/0.2
+## 5. Configuration data energeks.stacja/0.3
 
-Schema `schemat/energeks.stacja-0.2.schema.json` (version 0.1 data: `schemat/energeks.stacja-0.1.schema.json`). Main fields: `schemat_danych` (`energeks.stacja/0.2`, older data `energeks.stacja/0.1`), `wygenerowano`, `silnik`, `generator`, `producent`, `kod`, `nazwa`, `linia`, `wejscie`, `parametry_wejsciowe` (normalised parameters with `auto` and `blokady`), `dane`, `parametry`, `wyposazenie`, `zalezne_od_mocy`, `liczby`, `obudowa` (null for pole-mounted), `uwagi` (levels `info`, `uwaga`, `blad`), `normy`, `dokumenty`, `braki`, `zastrzezenie`.
+Schema `schemat/energeks.stacja-0.3.schema.json` (version 0.2 and 0.1 data: `schemat/energeks.stacja-0.2.schema.json` and `-0.1.schema.json`). Main fields: `schemat_danych` (`energeks.stacja/0.3`, older data `energeks.stacja/0.2` or `/0.1`), `wygenerowano`, `silnik`, `generator`, `producent`, `kod`, `nazwa`, `linia`, `wejscie`, `parametry_wejsciowe` (normalised parameters with `auto` and `blokady`), `dane`, `parametry`, `wyposazenie`, `zalezne_od_mocy`, `liczby`, `obudowa` (null for pole-mounted), `uwagi` (levels `info`, `uwaga`, `blad`), `normy`, `dokumenty`, `braki`, `zastrzezenie`.
 
 Units: power kVA, voltage kV, current A, short-circuit current kA, enclosure dimensions mm, masses t, volumes l. Texts in `dane`, `parametry` and `wyposazenie` are Polish and meant for people; programs should read `parametry_wejsciowe`, `liczby` and `obudowa`.
 
@@ -103,6 +106,7 @@ Units: power kVA, voltage kV, current A, short-circuit current kA, enclosure dim
 - Every document and data file states the engine version (`silnik`) and the format version (`schemat_danych`).
 - **A code once issued stays valid**: within a major format version the same code means the same functional configuration. The engine may change equipment selection (e.g. fuse table) but then changes its version, and documents state which version produced them.
 - A new option gets a new letter and a fixed place in the order in 3.2; a code issued earlier (without the new letter) stays canonical. Existing letters are never changed or reused. Version 0.2 adds `W` and `X` (after `Q`) and `U8` (at the end).
+- Version 0.3 extends value ranges: any power from 25 kVA, 1 to 24 feeders, LV 0.5 to 1.0 kV outside line P, options `I` (first), `Y` (after `X`), `Z1` to `Z3` (after telecontrol) and `U5`, `U69`, `U10`; every 0.2 code is a 0.3 code written the same way. Engine 0.11.0 uses equipment dimensions from catalogue data (circuit-breaker panels 750 mm, LV board up to 630 kVA at least 1100 mm), so for some codes with `W` or `V` panels and up to 630 kVA the selected enclosure or its description changes; the code and the equipment stay the same.
 - Version 0.2 extends value ranges (line `P`, 6 and 10 kV networks, 25 kA, 500 and 2000 to 2500 kVA in more lines); every 0.1 code is a 0.2 code with the same meaning (checked on 940,455 codes of engine 0.9.0). Configurator defaults for a new substation (e.g. number of line panels and feeders) may change; the code always states values explicitly.
 - New JSON fields may appear within 0.x without renaming the format; programs must ignore unknown fields. Removing a field or changing its meaning requires a new format version and a `CHANGELOG.md` entry.
 

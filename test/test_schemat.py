@@ -7,8 +7,8 @@ sch = {p.name: json.loads(p.read_text(encoding='utf-8')) for p in (D / 'schemat'
 reg = Registry().with_resources([(s['$id'], Resource.from_contents(s)) for s in sch.values()] + [(n, Resource.from_contents(s)) for n, s in sch.items()])
 for s in sch.values():
     Draft202012Validator.check_schema(s)
-v = Draft202012Validator(sch['energeks.stacja-0.2.schema.json'], registry=reg)
-vw = Draft202012Validator(sch['energeks.stacja.wejscie-0.2.schema.json'], registry=reg)
+v = Draft202012Validator(sch['energeks.stacja-0.3.schema.json'], registry=reg)
+vw = Draft202012Validator(sch['energeks.stacja.wejscie-0.3.schema.json'], registry=reg)
 bledy = 0
 for p in sorted((D / 'przyklady').glob('dane_*.json')):
     for e in v.iter_errors(json.loads(p.read_text(encoding='utf-8'))):

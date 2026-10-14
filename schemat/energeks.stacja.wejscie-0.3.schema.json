@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://energeks-stacje-api.energeks.workers.dev/schemat/energeks.stacja.wejscie-0.3.schema.json",
+  "title": "Parametry wejściowe stacji SN/nN (energeks.stacja/0.3)",
+  "description": "Parametry konfiguracji stacji. Pole bez podania przyjmuje wartość domyślną silnika. Dopuszczalne wartości mocy i odpływów zależą od linii (plik opcji).",
+  "type": "object",
+  "properties": {
+    "linia": {
+      "enum": [
+        "B",
+        "E",
+        "F",
+        "P"
+      ],
+      "description": "B stacja odbiorcza kontenerowa, E stacja dla e-mobilności, F stacja słupowa, P stacja dla fotowoltaiki (od 0.2)"
+    },
+    "moc": {
+      "type": "integer",
+      "minimum": 25,
+      "maximum": 2500,
+      "description": "moc transformatora w kVA, liczba całkowita (od 0.3): linie B i P 25 do 2500, F 25 do 630, E 630 do 2500; przy dwóch transformatorach moce z typoszeregu (400, 630, 800, 1000); moce typoszeregu 63, 100, 160, 250, 400, 500, 630, 800, 1000, 1250, 1600, 2000, 2500, poza nim transformator na zamówienie (straty do granic Tier 2, masa i wymiary według karty po zamówieniu)"
+    },
+    "liczbaTrafo": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "kV": {
+      "enum": [
+        6,
+        10,
+        15,
+        20
+      ],
+      "description": "napięcie sieci SN w kV; aparatura 12 kV przy 6 i 10 kV, 24 kV przy 15 i 20 kV"
+    },
+    "trafoTyp": {
+      "enum": [
+        "olejowy",
+        "suchy"
+      ]
+    },
+    "izolacja": {
+      "enum": [
+        "s",
+        "g",
+        "p"
+      ],
+      "description": "s stało-powietrzna, g gazowa bez fluorowanych gazów cieplarnianych, p powietrzna; zawsze bez F-gazów (rozporządzenie (UE) 2024/573)"
+    },
+    "polaL": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "poleL": {
+      "enum": [
+        "L",
+        "W"
+      ]
+    },
+    "pomiar": {
+      "enum": [
+        "SN",
+        "nN",
+        "brak"
+      ]
+    },
+    "poleT": {
+      "enum": [
+        "R",
+        "W"
+      ],
+      "description": "R rozłącznik z bezpiecznikami, W wyłącznik"
+    },
+    "odplywy": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "description": "liczba odpływów nN, dowolna od 1 (od 0.3; razem z polami rezerwowymi maks. 24, w stacji słupowej 6)"
+    },
+    "rezerwaOdp": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 23
+    },
+    "odplywWlk": {
+      "enum": [
+        "NH00",
+        "NH1",
+        "NH2",
+        "NH3"
+      ]
+    },
+    "obsluga": {
+      "enum": [
+        "wewnetrzna",
+        "zewnetrzna"
+      ]
+    },
+    "obudowaSzer": {
+      "enum": [
+        2550,
+        2960,
+        null
+      ]
+    },
+    "rei120": {
+      "type": "boolean"
+    },
+    "agregat": {
+      "type": "boolean"
+    },
+    "ppoz": {
+      "type": "boolean"
+    },
+    "analizator": {
+      "type": "boolean"
+    },
+    "kompJalowy": {
+      "type": "boolean"
+    },
+    "zaciski": {
+      "enum": [
+        "TOC-1",
+        "TOC-2",
+        "brak"
+      ]
+    },
+    "mocDocelowa": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "telemechanika": {
+      "enum": [
+        "brak",
+        "przygotowanie",
+        "FPI",
+        "sterowanie"
+      ]
+    },
+    "osd": {
+      "enum": [
+        "brak",
+        "PGE",
+        "Tauron",
+        "Enea",
+        "Energa",
+        "Stoen"
+      ]
+    },
+    "przejecieOSD": {
+      "type": "boolean"
+    },
+    "unn": {
+      "enum": [
+        0.4,
+        0.5,
+        0.69,
+        0.8,
+        1
+      ],
+      "description": "napięcie strony nN w kV (od 0.3 także 0,5, 0,69 i 1,0 kV oraz 0,8 kV poza linią P; nie w stacji słupowej); przy nN innym niż 0,4 kV układ IT, pomiar SN; w kodzie U5, U69, U8, U10"
+    },
+    "ikSN": {
+      "enum": [
+        16,
+        20,
+        25
+      ],
+      "description": "prąd zwarciowy sieci SN w kA (1 s); wybór przy sieci 6 i 10 kV (domyślnie 20), przy 15 i 20 kV 16 kA, w sieci Stoen 20 kA; w kodzie liczba po izolacji, gdy inna niż 16"
+    },
+    "aparatNN": {
+      "enum": [
+        "R",
+        "W"
+      ],
+      "description": "aparat główny nN: R rozłącznik, W wyłącznik z wyzwalaczem nadprądowym (opcja W w kodzie, do 630 kVA; powyżej 630 kVA zawsze wyłącznik)"
+    },
+    "ups": {
+      "type": "boolean",
+      "description": "UPS 230 V AC on-line 1 kVA w rozdzielnicy potrzeb własnych, podtrzymanie co najmniej 30 min (opcja Y w kodzie, od 0.3)"
+    },
+    "szr": {
+      "enum": [
+        "brak",
+        "nN-agregat",
+        "nN-sprzeglo",
+        "SN"
+      ],
+      "description": "samoczynne załączanie rezerwy (od 0.3): nN-agregat (wymaga agregat; Z1), nN-sprzeglo (dwa transformatory; Z2), SN (co najmniej 2 pola liniowe; Z3); nie w stacji słupowej i przekazywanej operatorowi"
+    },
+    "obudowa": {
+      "enum": [
+        "brak"
+      ],
+      "description": "brak: stacja wnętrzowa bez obudowy do montażu w pomieszczeniu klienta (opcja I w kodzie, od 0.3); bez obsługi zewnętrznej, szerokości obudowy i REI 120"
+    }
+  },
+  "additionalProperties": true
+}

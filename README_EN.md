@@ -2,9 +2,9 @@
 
 Polski: [README.md](README.md).
 
-One short code, e.g. `ENG-B630-15S-LPT-06-K`, describes a complete MV/LV transformer substation: line (prefabricated concrete, e-mobility, pole-mounted, photovoltaics), power, voltage, MV switchgear panels, LV outgoing ways, options and the grid operator standard (Poland, 6, 10, 15 and 20 kV networks). The same code works in a web address, in an offer, in a tender, in documents and in programs. The configuration data in JSON (`energeks.stacja/0.2`) carries input parameters, calculated values, equipment, standards and documents.
+One short code, e.g. `ENG-B630-15S-LPT-06-K`, describes a complete MV/LV transformer substation: line (prefabricated concrete, e-mobility, pole-mounted, photovoltaics), power, voltage, MV switchgear panels, LV outgoing ways, options and the grid operator standard (Poland, 6, 10, 15 and 20 kV networks). The same code works in a web address, in an offer, in a tender, in documents and in programs. The configuration data in JSON (`energeks.stacja/0.3`) carries input parameters, calculated values, equipment, standards and documents.
 
-Release 0.2.1 (14 October 2026), reference engine 0.10.1. History: [CHANGELOG.md](CHANGELOG.md) (English summary in each entry).
+Release 0.3.0 (14 October 2026), reference engine 0.11.0. History: [CHANGELOG.md](CHANGELOG.md) (English summary in each entry).
 
 ## Contents
 
@@ -12,8 +12,8 @@ Release 0.2.1 (14 October 2026), reference engine 0.10.1. History: [CHANGELOG.md
 |---|---|
 | `specyfikacja_pl.md` | specification in Polish (binding version) |
 | `specification_en.md` | specification in English |
-| `schemat/energeks.stacja-0.2.schema.json` | JSON schema of the configuration data (version 0.1 data: `energeks.stacja-0.1.schema.json`) (`$id` is the file address in the API: https://energeks-stacje-api.energeks.workers.dev/schemat/) |
-| `schemat/energeks.stacja.wejscie-0.2.schema.json` | JSON schema of the input parameters (version 0.1: `energeks.stacja.wejscie-0.1.schema.json`) |
+| `schemat/energeks.stacja-0.3.schema.json` | JSON schema of the configuration data (version 0.2 and 0.1 data: `energeks.stacja-0.2.schema.json`, `energeks.stacja-0.1.schema.json`) (`$id` is the file address in the API: https://energeks-stacje-api.energeks.workers.dev/schemat/) |
+| `schemat/energeks.stacja.wejscie-0.3.schema.json` | JSON schema of the input parameters (versions 0.2 and 0.1: `energeks.stacja.wejscie-0.2.schema.json`, `-0.1.schema.json`) |
 | `schemat/kod.regex.txt` | regular expression of the canonical code |
 | `przyklady/kody.json` | 20 codes with name, link and input parameters |
 | `przyklady/kody_bledne.json` | syntactically wrong and rule-inconsistent codes (for testing readers) |
@@ -28,7 +28,7 @@ Field names in the JSON data are Polish; they are part of the format. The Englis
 
 - **Syntax check of a code**: the expression in `schemat/kod.regex.txt`.
 - **Full validation and configuration from a code**: the [Energeks substation configurator](https://energeks.shop/stacje-transformatorowe/kreator-stacji.html?utm_source=github&utm_medium=referral&utm_campaign=standard_ai_2026q4&utm_content=repo_readme_en#ENG-B630-15S-LPT-06-K) (a code after `#` in the address opens the configuration; technical design, datasheet, tender specification and ZIP package are free, no registration; documents are in Polish) or the Energeks API: https://energeks-stacje-api.energeks.workers.dev (OpenAPI description at `/openapi.yaml`, MCP server for AI assistants at `/mcp`, no key).
-- **Reading data**: data from the configurator (button "Pobierz dane JSON", attachment in the PDF datasheet) and from the API conform to the `energeks.stacja-0.2` schema (older data: `energeks.stacja-0.1`).
+- **Reading data**: data from the configurator (button "Pobierz dane JSON", attachment in the PDF datasheet) and from the API conform to the `energeks.stacja-0.3` schema (older data: `energeks.stacja-0.2` or `-0.1`).
 - **Tests**: `node test/test.js` and `python3 test/test_schemat.py` (also run automatically in this repository, see Actions).
 
 ## Rules

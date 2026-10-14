@@ -1,8 +1,8 @@
 {
- "schemat_danych": "energeks.stacja/0.2",
+ "schemat_danych": "energeks.stacja/0.3",
  "wygenerowano": "2026-10-14",
  "generator": "0.7",
- "silnik": "0.10.1",
+ "silnik": "0.11.0",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -44,8 +44,10 @@
   "auto": {},
   "osd": "brak",
   "przejecieOSD": false,
+  "wnetrzowa": false,
   "liczbaTrafo": 1,
   "moc": 1000,
+  "mocSpoza": false,
   "kV": 15,
   "ikSN": 16,
   "unn": 0.8,
@@ -68,6 +70,8 @@
   "analizator": false,
   "kompJalowy": false,
   "obudowaSzer": null,
+  "ups": false,
+  "szr": "brak",
   "odplywy": 6,
   "rezerwaOdp": 0,
   "rezerwaMin": 0,
@@ -693,14 +697,14 @@
    "x0": 3407,
    "x1": 4407,
    "y0": 155,
-   "y1": 2155,
+   "y1": 2455,
    "orient": "B",
    "pola": [
     {
      "kod": "W",
-     "w": 600,
+     "w": 750,
      "a0": 155,
-     "a1": 755,
+     "a1": 905,
      "f": {
       "typ": "W",
       "nr": 1
@@ -709,17 +713,17 @@
     {
      "kod": "P",
      "w": 800,
-     "a0": 755,
-     "a1": 1555,
+     "a0": 905,
+     "a1": 1705,
      "f": {
       "typ": "P"
      }
     },
     {
      "kod": "V",
-     "w": 600,
-     "a0": 1555,
-     "a1": 2155,
+     "w": 750,
+     "a0": 1705,
+     "a1": 2455,
      "f": {
       "typ": "T",
       "nr": 1,
@@ -727,7 +731,7 @@
      }
     }
    ],
-   "W": 2000
+   "W": 2300
   },
   "wlaz": {
    "x0": 2581,
@@ -766,7 +770,7 @@
   "wlk": "NH2",
   "ppoz": false,
   "osprzet": null,
-  "rsnLen": 2000,
+  "rsnLen": 2300,
   "dodatki": []
  },
  "uwagi": [
@@ -792,7 +796,7 @@
   },
   {
    "poziom": "info",
-   "tekst": "Obudowa KSW 2,96 x 4,56 m dobrana wstępnie do aparatury: rozdzielnica SN 2,00 m przy ścianie szczytowej, rozdzielnica nN ok. 1,50 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,13 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
+   "tekst": "Obudowa KSW 2,96 x 4,56 m dobrana wstępnie do aparatury: rozdzielnica SN 2,30 m przy ścianie szczytowej, rozdzielnica nN ok. 1,50 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,13 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
   }
  ],
  "normy": [
@@ -847,7 +851,7 @@
    {
     "plik": "02_Rysunki_ENG-P1000-15S-WPV-06-KT1U8",
     "nazwa": "Rysunki A3 (SVG)",
-    "opis": "arkusze E-1 do E-9 z tabliczką Energeks, wektorowe, do edycji w programach CAD i graficznych"
+    "opis": "arkusze E-01 do E-09 z tabliczką Energeks, pliki nazwane kodem stacji i numerem arkusza, wektorowe, do edycji w programach CAD i graficznych"
    },
    {
     "plik": "03_Karta_katalogowa_ENG-P1000-15S-WPV-06-KT1U8.pdf",

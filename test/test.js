@@ -1,10 +1,10 @@
-// Testy specyfikacji energeks.stacja/0.2 bez zależności: składnia kodu, przykłady, wymagane pola danych.
+// Testy specyfikacji energeks.stacja/0.3 bez zależności: składnia kodu, przykłady, wymagane pola danych.
 // Użycie: node test/test.js   (pełna walidacja schematem JSON: python3 test/test_schemat.py)
 'use strict';
 const fs = require('fs'), path = require('path');
 const D = path.join(__dirname, '..');
 const re = new RegExp(fs.readFileSync(path.join(D, 'schemat/kod.regex.txt'), 'utf8').trim());
-const schema = JSON.parse(fs.readFileSync(path.join(D, 'schemat/energeks.stacja-0.2.schema.json'), 'utf8'));
+const schema = JSON.parse(fs.readFileSync(path.join(D, 'schemat/energeks.stacja-0.3.schema.json'), 'utf8'));
 let ok = 0, zle = 0;
 function sprawdz(war, opis) { if (war) ok++; else { zle++; console.log('BŁĄD:', opis); } }
 const P = JSON.parse(fs.readFileSync(path.join(D, 'przyklady/kody.json'), 'utf8'));
@@ -19,7 +19,7 @@ B.niespojne.forEach((k) => sprawdz(re.test(k), 'kod niespójny powinien być pop
 fs.readdirSync(path.join(D, 'przyklady')).filter((f) => /^dane_.*\.json$/.test(f)).forEach((f) => {
   const d = JSON.parse(fs.readFileSync(path.join(D, 'przyklady', f), 'utf8'));
   schema.required.forEach((k) => sprawdz(k in d, f + ': brak pola ' + k));
-  sprawdz(d.schemat_danych === 'energeks.stacja/0.2', f + ': schemat_danych');
+  sprawdz(d.schemat_danych === 'energeks.stacja/0.3', f + ': schemat_danych');
   sprawdz(!/tygodni|czas realizacji|termin realizacji/i.test(JSON.stringify(d)), f + ': bez terminu realizacji stacji');
   sprawdz(re.test(d.kod), f + ': kod');
   sprawdz(f === 'dane_' + d.kod.replace('+', 'R') + '.json', f + ': nazwa pliku a kod');

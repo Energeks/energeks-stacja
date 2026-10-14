@@ -2,6 +2,15 @@
 
 English summary at the end of each entry.
 
+## 0.3.0 (14.10.2026)
+
+- Format `energeks.stacja/0.3`, silnik referencyjny 0.11.0 (kreator 1.10). Każdy kod 0.2 i 0.1 pozostaje ważny i ma ten sam zapis; schematy 0.2 i 0.1 zostają w repozytorium.
+- Kod: moc dowolna od 25 kVA (liczba całkowita w zakresie linii; poza typoszeregiem transformator na zamówienie), odpływy `01` do `24`, opcje `I` (stacja wnętrzowa bez obudowy, na początku), `Y` (UPS, po `X`), `Z1`, `Z2`, `Z3` (SZR, po telemechanice) oraz `U5`, `U69`, `U10` (strona nN 0,5, 0,69 i 1,0 kV; `U8` także poza linią P). Nowe wyrażenie regularne w `schemat/kod.regex.txt`, poprzednie w `schemat/kod-0.2.regex.txt`.
+- Parametry wejściowe: `ups`, `szr`, `obudowa` (`brak`); `moc` i `odplywy` jako zakres zamiast listy; `unn` 0,4, 0,5, 0,69, 0,8 albo 1.
+- Silnik 0.11.0 przyjmuje wymiary aparatury z kart katalogowych (pola SN z wyłącznikiem 750 mm, rozdzielnica nN do 630 kVA co najmniej 1100 mm, transformator 2000 kVA z wymiarami): dla części kodów z polami `W` albo `V` i przy mocy do 630 kVA zmienia się dobrana obudowa albo jej opis, kod i aparatura zostają te same.
+- Przykłady: 40 kodów (było 32), dane siedmiu stacji (było cztery) wygenerowane silnikiem 0.11.0.
+- EN: format `energeks.stacja/0.3`, reference engine 0.11.0; every 0.2 and 0.1 code stays valid. Code: any transformer power from 25 kVA, 01 to 24 feeders, options `I` (indoor without enclosure, first), `Y` (UPS), `Z1` to `Z3` (automatic transfer switching) and `U5`, `U69`, `U10` (LV 0.5, 0.69, 1.0 kV; `U8` also outside line P). New input fields `ups`, `szr`, `obudowa`. Equipment dimensions from catalogue data may change the selected enclosure for some codes with circuit-breaker panels and up to 630 kVA; code and equipment stay the same.
+
 ## 0.2.1 (14.10.2026)
 
 - Pole `cena` w danych konfiguracji (opcjonalne, schemat `energeks.stacja-0.2.schema.json`): cena netto w PLN z transportem w Polsce, potwierdzana w ofercie; tryb `cena`, `widelki` albo `zapytanie`. Silnik referencyjny 0.10.1 (reguły doboru bez zmian). Przykłady danych z ceną z cennika Energeks 0.4.0.
