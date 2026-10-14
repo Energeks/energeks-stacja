@@ -374,7 +374,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B400-15S-LLT-06-KP-PGE; cena 261 800 zł netto"
+     "wartosc": "ENG-B400-15S-LLT-06-KP-PGE; cena 239 900 zł netto"
     }
    ]
   }
@@ -969,10 +969,10 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "cena_pln": 261800,
-  "opis": "Cena: 261 800 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+  "cena_pln": 239900,
+  "opis": "Cena: 239 900 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 261 800 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 239 900 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
 }

@@ -13,7 +13,7 @@ English summary at the end of each entry.
 
 ## 0.2.1 (14.10.2026)
 
-- Pole `cena` w danych konfiguracji (opcjonalne, schemat `energeks.stacja-0.2.schema.json`): cena netto w PLN z transportem w Polsce, potwierdzana w ofercie; tryb `cena`, `widelki` albo `zapytanie`. Silnik referencyjny 0.10.1 (reguły doboru bez zmian). Przykłady danych z ceną z cennika Energeks 0.4.0.
+- Pole `cena` w danych konfiguracji (opcjonalne, schemat `energeks.stacja-0.2.schema.json`): cena netto w PLN z transportem w Polsce, potwierdzana w ofercie; tryb `cena`, `widelki` albo `zapytanie`. Silnik referencyjny 0.10.1 (reguły doboru bez zmian). Przykłady danych z ceną z cennika Energeks 0.4.1 (przed wydaniem przeliczone z 0.4.0).
 - EN: optional `cena` field in the configuration data (net PLN price including transport within Poland, confirmed in the offer; mode `cena`, `widelki` or `zapytanie`); reference engine 0.10.1 (selection rules unchanged).
 
 ## 0.2.0 (14.10.2026)

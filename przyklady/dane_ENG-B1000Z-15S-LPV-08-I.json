@@ -352,7 +352,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B1000Z-15S-LPV-08-I; cena od 265 200 do 326 500 zł netto"
+     "wartosc": "ENG-B1000Z-15S-LPV-08-I; cena od 241 700 do 295 700 zł netto"
     }
    ]
   }
@@ -887,11 +887,11 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "od_pln": 265200,
-  "do_pln": 326500,
-  "opis": "Cena orientacyjna: od 265 200 zł do 326 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+  "od_pln": 241700,
+  "do_pln": 295700,
+  "opis": "Cena orientacyjna: od 241 700 zł do 295 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 265 200 zł do 326 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 241 700 zł do 295 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }

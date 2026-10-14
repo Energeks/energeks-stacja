@@ -365,7 +365,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B630-15S-LPT-06-K; cena 279 700 zł netto"
+     "wartosc": "ENG-B630-15S-LPT-06-K; cena 251 600 zł netto"
     }
    ]
   }
@@ -925,10 +925,10 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "cena_pln": 279700,
-  "opis": "Cena: 279 700 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+  "cena_pln": 251600,
+  "opis": "Cena: 251 600 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 279 700 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 251 600 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
 }

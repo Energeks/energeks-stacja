@@ -365,7 +365,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B315-15S-LPT-06-K; cena od 222 600 do 294 800 zł netto"
+     "wartosc": "ENG-B315-15S-LPT-06-K; cena od 199 100 do 263 500 zł netto"
     }
    ]
   }
@@ -933,11 +933,11 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "od_pln": 222600,
-  "do_pln": 294800,
-  "opis": "Cena orientacyjna: od 222 600 zł do 294 800 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+  "od_pln": 199100,
+  "do_pln": 263500,
+  "opis": "Cena orientacyjna: od 199 100 zł do 263 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 222 600 zł do 294 800 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 199 100 zł do 263 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }

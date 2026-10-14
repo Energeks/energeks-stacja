@@ -388,7 +388,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B630-15S-LPT-06-KAWYZ1; cena na zapytanie"
+     "wartosc": "ENG-B630-15S-LPT-06-KAWYZ1; cena od 259 900 do 354 400 zł netto"
     }
    ]
   }
@@ -969,13 +969,15 @@
   "Warunki środowiskowe potwierdzone certyfikatem stacji."
  ],
  "cena": {
-  "tryb": "zapytanie",
+  "tryb": "widelki",
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "opis": "Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
+  "od_pln": 259900,
+  "do_pln": 354400,
+  "opis": "Cena orientacyjna: od 259 900 zł do 354 400 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 259 900 zł do 354 400 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }
