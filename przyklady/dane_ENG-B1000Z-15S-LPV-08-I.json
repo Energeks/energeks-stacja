@@ -15,7 +15,7 @@
  },
  "kod": "ENG-B1000Z-15S-LPV-08-I",
  "nazwa": "Stacja transformatorowa wnętrzowa 1000 kVA 15/0,4 kV z pomiarem SN",
- "linia": "Stacja odbiorcza kontenerowa",
+ "linia": "Stacja odbiorcza wnętrzowa",
  "wejscie": {
   "linia": "B",
   "moc": 1000,
@@ -182,67 +182,35 @@
    ]
   },
   {
-   "grupa": "Obudowa",
+   "grupa": "Pomieszczenie i osłony",
    "wiersze": [
     {
-     "parametr": "Typ",
-     "wartosc": "betonowa KSW 2,96 x 4,56 m, z wewnętrznym korytarzem obsługi i piwnicą kablową"
+     "parametr": "Wykonanie",
+     "wartosc": "stacja wnętrzowa bez obudowy: aparatura i transformator w pomieszczeniu klienta"
     },
     {
-     "parametr": "Wymiary zewnętrzne",
-     "wartosc": "2,96 x 4,56 m"
+     "parametr": "Pomieszczenie (min., w świetle)",
+     "wartosc": "4,32 x 2,72 m, wysokość 2,81 m"
     },
     {
-     "parametr": "Wysokość",
-     "wartosc": "4,01 m z piwnicą kablową, nad terenem ok. 3,11 m"
+     "parametr": "Układ aparatury",
+     "wartosc": "jak w obudowie KSW 2,96 x 4,56 m; korytarz obsługi ok. 1,13 m"
     },
     {
-     "parametr": "Wnętrze",
-     "wartosc": "2,72 x 4,32 m, wysokość 2,81 m"
-    },
-    {
-     "parametr": "Piwnica kablowa",
-     "wartosc": "2,92 x 4,52 m, wysokość 0,79 m w świetle"
-    },
-    {
-     "parametr": "Komora transformatora",
-     "wartosc": "1,55 m w świetle; drzwi 1,17 m w ścianie frontowej, żaluzja 1,10 m w ścianie tylnej"
-    },
-    {
-     "parametr": "Korytarz obsługi",
-     "wartosc": "ok. 1,13 m; drzwi obsługi 0,95 m w ścianie frontowej"
-    },
-    {
-     "parametr": "Dach",
-     "wartosc": "betonowy, płaski, spadek ok. 3%"
-    },
-    {
-     "parametr": "Powierzchnia zabudowy",
-     "wartosc": "13,5 m2"
-    },
-    {
-     "parametr": "Klasa obudowy (PN-EN 62271-202)",
-     "wartosc": "10 K"
-    },
-    {
-     "parametr": "Łuk wewnętrzny",
-     "wartosc": "IAC-AB 16 kA 1 s"
-    },
-    {
-     "parametr": "Stopień ochrony",
-     "wartosc": "IP43, IK10"
-    },
-    {
-     "parametr": "Posadowienie",
-     "wartosc": "zagłębienie ok. 0,90 m na podsypce 0,10 m"
+     "parametr": "Osłona komory transformatora",
+     "wartosc": "siatka albo ściana z drzwiami z blokadą z uziemnikiem pola transformatorowego; komora 1,55 m w świetle"
     },
     {
      "parametr": "Misa olejowa",
-     "wartosc": "nie dotyczy"
+     "wartosc": "nie dotyczy (transformator żywiczny)"
     },
     {
-     "parametr": "Masy elementów (poglądowe)",
-     "wartosc": "wg producenta obudowy"
+     "parametr": "Łuk wewnętrzny",
+     "wartosc": "IAC-AB 16 kA 1 s (rozdzielnica SN)"
+    },
+    {
+     "parametr": "Po stronie klienta",
+     "wartosc": "pomieszczenie, posadzka nośna, wentylacja, drzwi, otwory montażowe, kanał kablowy i drogi transportu według projektu pomieszczenia"
     }
    ]
   },
@@ -744,7 +712,7 @@
   },
   {
    "poziom": "info",
-   "tekst": "Transformator żywiczny w stacji kontenerowej: sprawdzić wentylację i stopień ochrony obudowy transformatora."
+   "tekst": "Transformator żywiczny w pomieszczeniu: sprawdzić wentylację pomieszczenia i stopień ochrony osłony transformatora."
   },
   {
    "poziom": "info",
@@ -851,8 +819,8 @@
   ],
   "producentow": [
    {
-    "dokument": "Certyfikat zgodności stacji (badania typu PN-EN 62271-202)",
-    "zakres": "z jednostki akredytowanej, z listą typów rozdzielnic SN i nN dopuszczonych w stacji"
+    "dokument": "Rozdzielnice w pomieszczeniu",
+    "zakres": "badania typu rozdzielnicy SN (PN-EN 62271-200, łuk wewnętrzny IAC) i rozdzielnicy nN (PN-EN 61439-1 i -2); stacja wnętrzowa nie ma badań typu PN-EN 62271-202"
    },
    {
     "dokument": "Certyfikaty lub raporty z badań komponentów",
@@ -867,8 +835,8 @@
     "zakres": "karta katalogowa, deklaracja zgodności, deklaracja zgodności z wymaganiami ekoprojektu (Tier 2); karta prób przy dostawie"
    },
    {
-    "dokument": "Obudowa",
-    "zakres": "opinia o klasie odporności ogniowej, oświadczenie o szczelności i odporności misy olejowej na olej"
+    "dokument": "Osłona i misa",
+    "zakres": "osłona komory transformatora z blokadą; misa stalowa z oświadczeniem o szczelności (transformator olejowy)"
    },
    {
     "dokument": "Przy dostawie",
