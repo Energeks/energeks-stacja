@@ -370,7 +370,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-E2x630-15S-LPTT-08-K; cena 433 300 zł netto"
+     "wartosc": "ENG-E2x630-15S-LPTT-08-K; cena 394 000 zł netto"
     }
    ]
   }
@@ -904,7 +904,7 @@
    {
     "plik": "02_Rysunki_ENG-E2x630-15S-LPTT-08-K",
     "nazwa": "Rysunki A3 (SVG)",
-    "opis": "arkusze E-1 do E-9 z tabliczką Energeks, wektorowe, do edycji w programach CAD i graficznych"
+    "opis": "arkusze E-01 do E-09 z tabliczką Energeks, pliki nazwane kodem stacji i numerem arkusza, wektorowe, do edycji w programach CAD i graficznych"
    },
    {
     "plik": "03_Karta_katalogowa_ENG-E2x630-15S-LPTT-08-K.pdf",
@@ -980,10 +980,10 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "cena_pln": 433300,
-  "opis": "Cena: 433 300 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+  "cena_pln": 394000,
+  "opis": "Cena: 394 000 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 433 300 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena: 394 000 zł netto, z transportem w Polsce. Potwierdzamy ją w ofercie."
 }

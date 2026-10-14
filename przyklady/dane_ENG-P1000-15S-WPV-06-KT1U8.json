@@ -364,7 +364,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-P1000-15S-WPV-06-KT1U8; cena na zapytanie"
+     "wartosc": "ENG-P1000-15S-WPV-06-KT1U8; cena od 351 400 do 448 900 zł netto"
     }
    ]
   }
@@ -847,7 +847,7 @@
    {
     "plik": "02_Rysunki_ENG-P1000-15S-WPV-06-KT1U8",
     "nazwa": "Rysunki A3 (SVG)",
-    "opis": "arkusze E-1 do E-9 z tabliczką Energeks, wektorowe, do edycji w programach CAD i graficznych"
+    "opis": "arkusze E-01 do E-09 z tabliczką Energeks, pliki nazwane kodem stacji i numerem arkusza, wektorowe, do edycji w programach CAD i graficznych"
    },
    {
     "plik": "03_Karta_katalogowa_ENG-P1000-15S-WPV-06-KT1U8.pdf",
@@ -919,13 +919,15 @@
   "Warunki środowiskowe potwierdzone certyfikatem stacji."
  ],
  "cena": {
-  "tryb": "zapytanie",
+  "tryb": "widelki",
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.0",
+  "cennik": "0.4.1",
   "cennik_data": "2026-10-14",
-  "opis": "Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
+  "od_pln": 351400,
+  "do_pln": 448900,
+  "opis": "Cena orientacyjna: od 351 400 zł do 448 900 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena na zapytanie: przygotujemy ją w ofercie dla tej konfiguracji."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 351 400 zł do 448 900 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }
