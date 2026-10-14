@@ -299,11 +299,11 @@
    "wiersze": [
     {
      "parametr": "Warunki normalne",
-     "wartosc": "wg PN-EN 62271-1: temperatura otoczenia od -25 do +40 st. C, wysokość do 1000 m n.p.m., wiatr do 34 m/s; potwierdzane certyfikatem stacji"
+     "wartosc": "wg PN-EN 62271-1 dla urządzeń wnętrzowych: temperatura otoczenia od -5 do +40 st. C, wysokość do 1000 m n.p.m."
     },
     {
      "parametr": "Miejsce pracy",
-     "wartosc": "na zewnątrz, w gruncie (posadowienie wg projektu)"
+     "wartosc": "wewnątrz pomieszczenia klienta (stacja wnętrzowa bez obudowy)"
     }
    ]
   },
@@ -466,7 +466,7 @@
     },
     {
      "nazwa": "Dokumentacja",
-     "opis": "DTR z instrukcją transportu, rozładunku i posadowienia; certyfikat badań typu PN-EN 62271-202 z zastosowaną rozdzielnicą SN; protokoły prób wyrobu; deklaracje zgodności rozdzielnic (PN-EN 62271-200, PN-EN 61439); karta prób transformatora (PN-EN 60076) i deklaracja Ecodesign; schemat jednokreskowy",
+     "opis": "DTR z instrukcją transportu, montażu w pomieszczeniu i eksploatacji; badania typu rozdzielnicy SN (PN-EN 62271-200) i rozdzielnicy nN (PN-EN 61439); protokoły prób wyrobu; deklaracje zgodności; karta prób transformatora (PN-EN 60076) i deklaracja Ecodesign; schemat jednokreskowy",
      "dobierane_do_mocy": false
     }
    ]
