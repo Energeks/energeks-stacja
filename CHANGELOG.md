@@ -2,6 +2,14 @@
 
 English summary at the end of each entry.
 
+## 0.2.0 (14.10.2026)
+
+- Format `energeks.stacja/0.2`, silnik referencyjny 0.10.0. Każdy kod 0.1 pozostaje ważny i oznacza tę samą stację (sprawdzone na 940 455 kodach); schematy 0.1 zostają w repozytorium dla danych 0.1.
+- Kod: linia `P` (stacja dla fotowoltaiki), sieć 6 i 10 kV (aparatura 12 kV), prąd zwarciowy SN zapisany liczbą po izolacji (`20` albo `25`; przy 6 i 10 kV do wyboru), moce 2000 i 2500 kVA w linii B, 500 i 630 kVA w linii F, opcje `W` (wyłącznik jako aparat główny nN do 630 kVA), `X` (bez układu pomiarowego w stacji) i `U8` (strona nN 0,8 kV, układ IT). Nowe wyrażenie regularne w `schemat/kod.regex.txt`, poprzednie w `schemat/kod-0.1.regex.txt`.
+- Parametry wejściowe: `ikSN`, `unn`, `aparatNN`, wartość `brak` w polu `pomiar`.
+- Przykłady: 32 kody (było 20), dane czterech stacji wygenerowane silnikiem 0.10.0. Dane konfiguracji nie podają terminu realizacji stacji.
+- EN: format `energeks.stacja/0.2`, reference engine 0.10.0; every 0.1 code stays valid with the same meaning. Code: line `P` (photovoltaics), 6 and 10 kV networks (12 kV equipment), MV short-circuit current as a number after the insulation letter (`20` or `25`), 2000 and 2500 kVA in line B, 500 and 630 kVA in line F, options `W` (LV main circuit breaker up to 630 kVA), `X` (no metering in the substation) and `U8` (LV 0.8 kV, IT system). New input fields `ikSN`, `unn`, `aparatNN`; `pomiar` may be `brak`. 32 example codes; data no longer states a substation lead time.
+
 ## 0.1.2 (8.10.2026)
 
 - Silnik referencyjny 0.8.2 (tylko tekst): etykieta izolacji `G` to „gazowa bez fluorowanych gazów cieplarnianych” zamiast wcześniejszego brzmienia z progiem współczynnika ocieplenia. Rozporządzenie (UE) 2024/573, art. 13 ust. 9, dla rozdzielnic SN do 52 kV zakazuje fluorowanych gazów cieplarnianych jako medium izolacyjnego lub łączeniowego bez żadnego progu (próg dotyczy tylko rozdzielnic WN). Opisy w schematach poprawione; kody i reguły bez zmian.

@@ -1,8 +1,8 @@
 {
- "schemat_danych": "energeks.stacja/0.1",
- "wygenerowano": "2026-10-08",
- "generator": "0.5",
- "silnik": "0.8.2",
+ "schemat_danych": "energeks.stacja/0.2",
+ "wygenerowano": "2026-10-14",
+ "generator": "0.6",
+ "silnik": "0.10.0",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -33,6 +33,7 @@
   "ppoz": false,
   "analizator": false,
   "kompJalowy": false,
+  "unn": 0.4,
   "odplywWlk": "NH2",
   "telemechanika": "brak"
  },
@@ -48,11 +49,14 @@
   "liczbaTrafo": 1,
   "moc": 630,
   "kV": 15,
+  "ikSN": 16,
+  "unn": 0.4,
   "trafoTyp": "olejowy",
   "mocDocelowa": null,
   "zaciskiMozliwe": true,
   "zaciski": "TOC-1",
   "izolacja": "s",
+  "pomiarNiedostepne": {},
   "pomiar": "SN",
   "polaL": 1,
   "poleL": "L",
@@ -69,6 +73,7 @@
   "rezerwaMin": 0,
   "rezerwaMax": 18,
   "odplywWlk": "NH2",
+  "aparatNN": "R",
   "poleT": "R",
   "blokady": {}
  },
@@ -124,10 +129,6 @@
   {
    "parametr": "Dostawa",
    "wartosc": "transport; rozładunek i montaż po stronie klienta"
-  },
-  {
-   "parametr": "Czas realizacji",
-   "wartosc": "18 tygodni"
   }
  ],
  "parametry": [
@@ -360,7 +361,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B630-15S-LPT-06-K; cena na zapytanie, czas realizacji 18 tygodni"
+     "wartosc": "ENG-B630-15S-LPT-06-K; cena na zapytanie"
     }
    ]
   }
@@ -545,11 +546,6 @@
      "dobierane_do_mocy": false
     },
     {
-     "nazwa": "Czas realizacji 18 tygodni",
-     "opis": "od zamówienia; wersje 20 kV i niestandardowe mogą wymagać dłuższego terminu",
-     "dobierane_do_mocy": false
-    },
-    {
      "nazwa": "Poza zakresem dostawy",
      "opis": "projekt i uzgodnienia, rozładunek, wykop i posadowienie, uziom i jego pomiar, kable SN i nN z głowicami, montaż, przyłączenie, pomiary pomontażowe, nastawy zabezpieczeń, odbiory: po stronie klienta lub jego wykonawcy",
      "dobierane_do_mocy": false
@@ -630,6 +626,8 @@
   "przekrojSN": 70,
   "Sd": 630,
   "InNNd": 909.3266739736606,
+  "unn": 0.4,
+  "klasaSN": 24,
   "qKomp": null,
   "ctTech": 1000
  },

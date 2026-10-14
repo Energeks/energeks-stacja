@@ -1,13 +1,13 @@
-# Kod i dane stacji SN/nN, format energeks.stacja/0.1
+# Kod i dane stacji SN/nN, format energeks.stacja/0.2
 
-Wersja specyfikacji 0.1 (wydanie 0.1.2), 8.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.8.2.
+Wersja specyfikacji 0.2 (wydanie 0.2.0), 14.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.10.0. Kody i dane w wersji 0.1 pozostają ważne (punkt 6).
 
 ## 1. Cel i zakres
 
-Specyfikacja opisuje dwie rzeczy, które pozwalają jednoznacznie przekazać konfigurację kompaktowej lub słupowej stacji transformatorowej SN/nN (sieć 15 i 20 kV, transformatory 63 do 2500 kVA oraz 2 x 400 do 2 x 1000 kVA) między ludźmi, programami i asystentami AI:
+Specyfikacja opisuje dwie rzeczy, które pozwalają jednoznacznie przekazać konfigurację kompaktowej lub słupowej stacji transformatorowej SN/nN (sieć 6, 10, 15 i 20 kV, transformatory 63 do 2500 kVA oraz 2 x 400 do 2 x 1000 kVA, strona nN 0,4 kV albo 0,8 kV w stacji dla fotowoltaiki) między ludźmi, programami i asystentami AI:
 
 1. **kod stacji**: krótki napis, np. `ENG-B630-15S-LPT-06-K`, z którego da się odtworzyć całą konfigurację,
-2. **dane konfiguracji** w formacie JSON `energeks.stacja/0.1`: parametry wejściowe, parametry wyliczone, wyposażenie, normy i dokumenty.
+2. **dane konfiguracji** w formacie JSON `energeks.stacja/0.2`: parametry wejściowe, parametry wyliczone, wyposażenie, normy i dokumenty.
 
 Ten sam kod działa w adresie strony (`https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#KOD`), w ofercie, w zapytaniu, w dokumentach i w API. Dane JSON są osadzane w karcie katalogowej PDF (załącznik `dane_<kod>.json`) i pobierane z kreatora.
 
@@ -17,7 +17,7 @@ Specyfikacja nie opisuje reguł doboru aparatury (to robi silnik) ani cen.
 
 | Pojęcie | Znaczenie |
 |---|---|
-| linia | rodzaj stacji: `B` stacja odbiorcza kontenerowa, `E` stacja dla e-mobilności (kontenerowa), `F` stacja słupowa |
+| linia | rodzaj stacji: `B` stacja odbiorcza kontenerowa, `E` stacja dla e-mobilności (kontenerowa), `F` stacja słupowa, `P` stacja dla fotowoltaiki (kontenerowa) |
 | silnik | program, który z parametrów wejściowych liczy konfigurację i kod (referencyjny: `konfigurator.js`, wersja na każdym dokumencie) |
 | kod kanoniczny | kod, który silnik zwraca dla danej konfiguracji; dokładnie jeden dla każdej konfiguracji |
 | OSD | operator systemu dystrybucyjnego; stacja przekazywana OSD ma w kodzie dopisek operatora |
@@ -28,19 +28,19 @@ Specyfikacja nie opisuje reguł doboru aparatury (to robi silnik) ani cen.
 ### 3.1 Budowa
 
 ```
-ENG-{linia}{2x}{moc}{Z}-{kV}{izolacja}{20}-{pola SN}-{odpływy}[+{rezerwa}][-{opcje}][-{OSD}]
+ENG-{linia}{2x}{moc}{Z}-{kV}{izolacja}{Ik}-{pola SN}-{odpływy}[+{rezerwa}][-{opcje}][-{OSD}]
 ```
 
 | Segment | Wartości | Znaczenie |
 |---|---|---|
 | `ENG` | stały | przedrostek formatu |
-| linia | `B`, `E`, `F` | rodzaj stacji |
+| linia | `B`, `E`, `F`, `P` | rodzaj stacji |
 | `2x` | opcjonalnie | dwa transformatory (linia B: 400 do 1000 kVA, linia E: 630 do 1000 kVA) |
-| moc | liczba | moc jednego transformatora w kVA (B: 100 do 1600, E: 630 do 2500, F: 63 do 400) |
+| moc | liczba | moc jednego transformatora w kVA (B: 100 do 2500, E: 630 do 2500, F: 63 do 630, P: 100 do 2500) |
 | `Z` | opcjonalnie | transformator suchy (żywiczny); bez litery olejowy |
-| kV | `15`, `20` | napięcie sieci SN; aparatura 24 kV |
+| kV | `6`, `10`, `15`, `20` | napięcie sieci SN; aparatura 12 kV przy 6 i 10 kV, 24 kV przy 15 i 20 kV |
 | izolacja | `S`, `G`, `P` | izolacja rozdzielnicy SN bez F-gazów: S stało-powietrzna, G gazowa bez fluorowanych gazów cieplarnianych, P powietrzna; w stacji słupowej brak |
-| `20` | opcjonalnie | prąd zwarciowy SN 20 kA/1 s (sieć, w której wymaga tego operator); bez dopisku 16 kA/1 s |
+| Ik | opcjonalnie `20` albo `25` | prąd zwarciowy sieci SN w kA/1 s, gdy inny niż 16 (sieć Stoen 20 kA; przy sieci 6 i 10 kV do wyboru 16, 20 albo 25 kA, domyślnie 20 kA); bez dopisku 16 kA/1 s |
 | pola SN | `L`, `W`, `P`, `T`, `V` albo `PB` | pola rozdzielnicy SN od lewej: L liniowe z rozłącznikiem, W liniowe z wyłącznikiem, P pomiarowe, T transformatorowe z bezpiecznikami, V transformatorowe z wyłącznikiem; `PB` stacja słupowa |
 | odpływy | 2 cyfry | liczba odpływów nN (na sekcję przy dwóch transformatorach) |
 | `+rezerwa` | 2 cyfry | liczba pól rezerwowych nN; razem z odpływami maks. 24 (stacja słupowa 6) |
@@ -58,18 +58,21 @@ ENG-{linia}{2x}{moc}{Z}-{kV}{izolacja}{20}-{pola SN}-{odpływy}[+{rezerwa}][-{op
 | `P` | przycisk przeciwpożarowy wyzwalający łącznik pola transformatorowego |
 | `M` | analizator parametrów sieci w rozdzielnicy nN |
 | `Q` | kompensacja mocy biernej biegu jałowego (gdy nie wynika ze standardu operatora) |
+| `W` | wyłącznik z wyzwalaczem nadprądowym jako aparat główny nN przy mocy do 630 kVA (od 0.2; powyżej 630 kVA wyłącznik jest zawsze, bez litery) |
+| `X` | bez układu pomiarowego w stacji: pomiar rozliczeniowy poza stacją, stacja prywatna albo za istniejącym pomiarem (od 0.2) |
 | `C2` | zaciski nN transformatora w wykonaniu kompaktowym (TOC-2) zamiast domyślnych (TOC-1) |
 | `C0` | bez zacisków nN dostawcy stacji (zaciski według zamawiającego) |
 | `D` i moc | stacja przygotowana na transformator o większej mocy, np. `D1000` |
 | `N00`, `N1`, `N2`, `N3` | wielkość rozłączników odpływów inna niż domyślna dla linii |
 | `T1`, `T2`, `T3` | telemechanika: przygotowanie, wskaźniki zwarć, zdalne sterowanie |
+| `U8` | strona nN 0,8 kV, układ IT z kontrolą stanu izolacji (linia P, od 0.2) |
 
 ### 3.3 Wyrażenie regularne (składnia)
 
 Kod kanoniczny spełnia wyrażenie:
 
 ```
-^ENG-(?:[BE](?:2x)?\d{3,4}Z?-(?:15|20)[SGP](?:20)?-[LWPTV]+|F\d{2,3}-(?:15|20)-PB)-\d{2}(?:\+\d{2})?(?:-(?=[KSRAPMQCDNT])K?S?R?A?P?M?Q?(?:C[02])?(?:D\d{3,4})?(?:N(?:00|1|2|3))?(?:T[123])?)?(?:-(?:TAURON|ENEA|ENERGA|PGE|STOEN|OSD))?$
+^ENG-(?:[BEP](?:2x)?\d{3,4}Z?-(?:6|10|15|20)[SGP](?:20|25)?-[LWPTV]+|F\d{2,3}-(?:6|10|15|20)-PB)-\d{2}(?:\+\d{2})?(?:-(?=[KSRAPMQWXCDNTU])K?S?R?A?P?M?Q?W?X?(?:C[02])?(?:D\d{3,4})?(?:N(?:00|1|2|3))?(?:T[123])?(?:U8)?)?(?:-(?:TAURON|ENEA|ENERGA|PGE|STOEN|OSD))?$
 ```
 
 Sprawdzone testami automatycznymi na pełnej próbce kodów z silnika referencyjnego (wszystkie zgodne); kody spoza wyrażenia nie są kodami kanonicznymi. Wyrażenie sprawdza tylko składnię: kod poprawny składniowo może być sprzeczny z regułami doboru (np. opcja `C2` przy mocy docelowej od 800 kVA). O poprawności rozstrzyga silnik (punkt 3.5).
@@ -101,24 +104,33 @@ Kod nie zawiera kontekstu, który nie zmienia wyposażenia (np. operator przy st
 | `ENG-B630Z-20G-LPT-06-KRPM` | transformator suchy, sieć 20 kV, izolacja gazowa, REI 120 |
 | `ENG-E1000-15S-LPV-10-KT1` | e-mobilność 1000 kVA, wyłącznik w polu transformatorowym, przygotowanie pod telemechanikę |
 | `ENG-F160-15-PB-04` | stacja słupowa 160 kVA, 4 odpływy |
+| `ENG-B630-15S-LT-06-KX` | bez układu pomiarowego w stacji |
+| `ENG-B2000-15S-LLPV-08-K` | stacja odbiorcza 2000 kVA, dwa pola liniowe |
+| `ENG-B630-10S20-LLPT-08-K` | sieć 10 kV, aparatura 12 kV, prąd zwarciowy 20 kA |
+| `ENG-B400-15S-LLPT-08-KW` | wyłącznik jako aparat główny nN |
+| `ENG-F630-20-PB-04` | stacja słupowa 630 kVA, konstrukcja wzmocniona |
+| `ENG-P1000-15S-WPV-06-KT1U8` | stacja dla fotowoltaiki 1000 kVA, nN 0,8 kV |
 
 Więcej w `przyklady/kody.json`.
 
 ## 4. Parametry wejściowe
 
-Parametry wejściowe (obiekt `wejscie` w danych, ciało zapytania `POST /konfiguracja` w API) opisuje schemat `schemat/energeks.stacja.wejscie-0.1.schema.json`. Pole bez podania przyjmuje wartość domyślną silnika.
+Parametry wejściowe (obiekt `wejscie` w danych, ciało zapytania `POST /konfiguracja` w API) opisuje schemat `schemat/energeks.stacja.wejscie-0.2.schema.json`. Pole bez podania przyjmuje wartość domyślną silnika.
 
 | Pole | Typ | Wartości | Kod |
 |---|---|---|---|
-| `linia` | tekst | `B`, `E`, `F` | linia |
+| `linia` | tekst | `B`, `E`, `F`, `P` | linia |
 | `moc` | liczba (kVA) | moce linii | moc |
 | `liczbaTrafo` | liczba | 1, 2 | `2x` |
-| `kV` | liczba | 15, 20 | kV |
+| `kV` | liczba | 6, 10, 15, 20 | kV |
+| `ikSN` | liczba (kA) | 16, 20, 25 | Ik po izolacji |
+| `unn` | liczba (kV) | 0.4, 0.8 (0.8 tylko linia P) | `U8` |
+| `aparatNN` | tekst | `R`, `W` | `W` |
 | `trafoTyp` | tekst | `olejowy`, `suchy` | `Z` |
 | `izolacja` | tekst | `s`, `g`, `p` | S, G, P |
 | `polaL` | liczba | 1 do 3 | liczba L lub W |
 | `poleL` | tekst | `L`, `W` | L albo W |
-| `pomiar` | tekst | `SN`, `nN` | P w polach SN |
+| `pomiar` | tekst | `SN`, `nN`, `brak` | P w polach SN; `brak`: `X` |
 | `poleT` | tekst | `R`, `W` | T albo V |
 | `odplywy` | liczba | odpływy linii | odpływy |
 | `rezerwaOdp` | liczba | od 0 | `+rezerwa` |
@@ -134,13 +146,13 @@ Parametry wejściowe (obiekt `wejscie` w danych, ciało zapytania `POST /konfigu
 
 Pełna lista wartości dla każdej linii i operatora: plik opcji (`opcje.json`, w API `GET /opcje`).
 
-## 5. Dane konfiguracji energeks.stacja/0.1
+## 5. Dane konfiguracji energeks.stacja/0.2
 
-Obiekt JSON opisany schematem `schemat/energeks.stacja-0.1.schema.json`. Najważniejsze pola:
+Obiekt JSON opisany schematem `schemat/energeks.stacja-0.2.schema.json` (dane wersji 0.1 opisuje nadal `schemat/energeks.stacja-0.1.schema.json`). Najważniejsze pola:
 
 | Pole | Typ | Znaczenie |
 |---|---|---|
-| `schemat_danych` | tekst | zawsze `energeks.stacja/0.1` |
+| `schemat_danych` | tekst | `energeks.stacja/0.2` (dane starsze: `energeks.stacja/0.1`) |
 | `wygenerowano` | data `RRRR-MM-DD` | data utworzenia danych |
 | `silnik`, `generator` | tekst | wersje silnika i generatora dokumentów |
 | `producent` | obiekt | dane producenta stacji |
@@ -165,7 +177,8 @@ Jednostki: moce w kVA, napięcia w kV, prądy w A, prądy zwarciowe w kA, wymiar
 
 - Każdy dokument i każdy plik danych podaje wersję silnika (`silnik`) i wersję formatu (`schemat_danych`).
 - **Kod raz wydany pozostaje ważny**: w obrębie głównej wersji formatu (0.x, potem 1.x) ten sam kod oznacza tę samą konfigurację funkcjonalną. Silnik może zmienić dobór aparatów (np. tabelę wkładek), ale wtedy zmienia swoją wersję, a dokumenty podają, z której wersji pochodzą.
-- Nowe opcje dopisuje się na końcu kolejności z punktu 3.2. Istniejących znaków nie zmienia się i nie używa ponownie w innym znaczeniu.
+- Nowa opcja dostaje nowy znak i stałe miejsce w kolejności z punktu 3.2; kod wydany wcześniej (bez nowego znaku) pozostaje kanoniczny. Istniejących znaków nie zmienia się i nie używa ponownie w innym znaczeniu. W wersji 0.2 doszły `W` i `X` (po `Q`) oraz `U8` (na końcu).
+- Wersja 0.2 rozszerza zakres wartości (linia `P`, sieć 6 i 10 kV, prąd zwarciowy 25 kA, moce 500 i 2000 do 2500 kVA w kolejnych liniach); każdy kod 0.1 jest kodem 0.2 o tym samym znaczeniu (sprawdzone na 940 455 kodach silnika 0.9.0). Domyślne wartości kreatora dla nowej stacji (np. liczba pól liniowych i odpływów) mogą się zmieniać; kod zawsze zapisuje wartości wprost.
 - Nowe pola danych JSON mogą dojść w wersji 0.x bez zmiany nazwy formatu; programy muszą ignorować pola, których nie znają. Usunięcie lub zmiana znaczenia pola wymaga nowej wersji formatu (`energeks.stacja/0.2` albo `/1.0`) i wpisu w `CHANGELOG.md`.
 - Kod niespójny w nowej wersji silnika (reguła się zmieniła) czytnik wczytuje jako najbliższą konfigurację i mówi o tym wprost.
 

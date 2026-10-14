@@ -1,6 +1,6 @@
 {
- "schemat_danych": "energeks.stacja.przyklady/0.1",
- "silnik": "0.8.2",
+ "schemat_danych": "energeks.stacja.przyklady/0.2",
+ "silnik": "0.10.0",
  "przyklady": [
   {
    "kod": "ENG-B630-15S-LPT-06-K",
@@ -23,6 +23,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -48,6 +49,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -73,6 +75,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -98,6 +101,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -124,6 +128,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -149,6 +154,7 @@
     "ppoz": true,
     "analizator": true,
     "kompJalowy": false,
+    "unn": 0.4,
     "mocDocelowa": 1000,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
@@ -175,6 +181,7 @@
     "ppoz": true,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "zaciski": "TOC-2",
     "mocDocelowa": 630,
     "odplywWlk": "NH2",
@@ -203,6 +210,7 @@
     "ppoz": true,
     "analizator": true,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -227,6 +235,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak",
     "osd": "Tauron",
@@ -253,6 +262,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak",
     "osd": "Enea",
@@ -279,6 +289,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak",
     "osd": "Stoen",
@@ -307,6 +318,7 @@
     "ppoz": true,
     "analizator": true,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -332,6 +344,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -357,6 +370,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": true,
+    "unn": 0.4,
     "zaciski": "brak",
     "odplywWlk": "NH2",
     "telemechanika": "brak"
@@ -383,6 +397,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "przygotowanie"
    }
@@ -409,6 +424,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "brak"
    }
@@ -434,6 +450,7 @@
     "ppoz": false,
     "analizator": false,
     "kompJalowy": false,
+    "unn": 0.4,
     "odplywWlk": "NH2",
     "telemechanika": "FPI"
    }
@@ -448,6 +465,7 @@
     "kV": 15,
     "odplywy": 4,
     "rezerwaOdp": 0,
+    "unn": 0.4,
     "odplywWlk": "NH1",
     "telemechanika": "brak"
    }
@@ -462,6 +480,7 @@
     "kV": 15,
     "odplywy": 4,
     "rezerwaOdp": 0,
+    "unn": 0.4,
     "odplywWlk": "NH1",
     "telemechanika": "brak",
     "osd": "Tauron",
@@ -478,8 +497,293 @@
     "kV": 15,
     "odplywy": 4,
     "rezerwaOdp": 0,
+    "unn": 0.4,
     "odplywWlk": "NH00",
     "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-B630-15S-LT-06-KX",
+   "nazwa": "Stacja transformatorowa kontenerowa 630 kVA 15/0,4 kV bez pomiaru",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B630-15S-LT-06-KX",
+   "wejscie": {
+    "linia": "B",
+    "moc": 630,
+    "kV": 15,
+    "izolacja": "s",
+    "polaL": 1,
+    "poleL": "L",
+    "pomiar": "brak",
+    "poleT": "R",
+    "odplywy": 6,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-F160-15-PB-04-X",
+   "nazwa": "Stacja transformatorowa słupowa 160 kVA 15/0,4 kV bez pomiaru",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-F160-15-PB-04-X",
+   "wejscie": {
+    "linia": "F",
+    "moc": 160,
+    "kV": 15,
+    "odplywy": 4,
+    "rezerwaOdp": 0,
+    "unn": 0.4,
+    "pomiar": "brak",
+    "odplywWlk": "NH1",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-B2000-15S-LLPV-08-K",
+   "nazwa": "Stacja transformatorowa kontenerowa 2000 kVA 15/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B2000-15S-LLPV-08-K",
+   "wejscie": {
+    "linia": "B",
+    "moc": 2000,
+    "kV": 15,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "W",
+    "odplywy": 8,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-B2500-20S-LLPV-12-K",
+   "nazwa": "Stacja transformatorowa kontenerowa 2500 kVA 20/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B2500-20S-LLPV-12-K",
+   "wejscie": {
+    "linia": "B",
+    "moc": 2500,
+    "kV": 20,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "W",
+    "odplywy": 12,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-B630-10S20-LLPT-08-K",
+   "nazwa": "Stacja transformatorowa kontenerowa 630 kVA 10/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B630-10S20-LLPT-08-K",
+   "wejscie": {
+    "linia": "B",
+    "moc": 630,
+    "kV": 10,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "R",
+    "odplywy": 8,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak",
+    "ikSN": 20
+   }
+  },
+  {
+   "kod": "ENG-B1000-10S25-LLPV-08-K",
+   "nazwa": "Stacja transformatorowa kontenerowa 1000 kVA 10/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B1000-10S25-LLPV-08-K",
+   "wejscie": {
+    "linia": "B",
+    "moc": 1000,
+    "kV": 10,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "W",
+    "odplywy": 8,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak",
+    "ikSN": 25
+   }
+  },
+  {
+   "kod": "ENG-B630-6S20-LLPV-08-K",
+   "nazwa": "Stacja transformatorowa kontenerowa 630 kVA 6/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B630-6S20-LLPV-08-K",
+   "wejscie": {
+    "linia": "B",
+    "moc": 630,
+    "kV": 6,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "W",
+    "odplywy": 8,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak",
+    "ikSN": 20
+   }
+  },
+  {
+   "kod": "ENG-B400-15S-LLPT-08-KW",
+   "nazwa": "Stacja transformatorowa kontenerowa 400 kVA 15/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-B400-15S-LLPT-08-KW",
+   "wejscie": {
+    "linia": "B",
+    "moc": 400,
+    "kV": 15,
+    "izolacja": "s",
+    "polaL": 2,
+    "poleL": "L",
+    "pomiar": "SN",
+    "poleT": "R",
+    "odplywy": 8,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "aparatNN": "W",
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-F500-15-PB-04",
+   "nazwa": "Stacja transformatorowa słupowa 500 kVA 15/0,4 kV",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-F500-15-PB-04",
+   "wejscie": {
+    "linia": "F",
+    "moc": 500,
+    "kV": 15,
+    "odplywy": 4,
+    "rezerwaOdp": 0,
+    "unn": 0.4,
+    "odplywWlk": "NH1",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-F630-20-PB-04",
+   "nazwa": "Stacja transformatorowa słupowa 630 kVA 20/0,4 kV",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-F630-20-PB-04",
+   "wejscie": {
+    "linia": "F",
+    "moc": 630,
+    "kV": 20,
+    "odplywy": 4,
+    "rezerwaOdp": 0,
+    "unn": 0.4,
+    "odplywWlk": "NH1",
+    "telemechanika": "brak"
+   }
+  },
+  {
+   "kod": "ENG-P1000-15S-WPV-06-KT1U8",
+   "nazwa": "Stacja transformatorowa dla fotowoltaiki 1000 kVA 15/0,8 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-P1000-15S-WPV-06-KT1U8",
+   "wejscie": {
+    "linia": "P",
+    "moc": 1000,
+    "kV": 15,
+    "izolacja": "s",
+    "polaL": 1,
+    "poleL": "W",
+    "pomiar": "SN",
+    "poleT": "W",
+    "odplywy": 6,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.8,
+    "odplywWlk": "NH2",
+    "telemechanika": "przygotowanie"
+   }
+  },
+  {
+   "kod": "ENG-P630-15S-WPT-06-KT1",
+   "nazwa": "Stacja transformatorowa dla fotowoltaiki 630 kVA 15/0,4 kV z pomiarem SN",
+   "link": "https://energeks.shop/stacje-transformatorowe/kreator-stacji.html#ENG-P630-15S-WPT-06-KT1",
+   "wejscie": {
+    "linia": "P",
+    "moc": 630,
+    "kV": 15,
+    "izolacja": "s",
+    "polaL": 1,
+    "poleL": "W",
+    "pomiar": "SN",
+    "poleT": "R",
+    "odplywy": 6,
+    "rezerwaOdp": 0,
+    "obsluga": "wewnetrzna",
+    "rei120": false,
+    "agregat": false,
+    "ppoz": false,
+    "analizator": false,
+    "kompJalowy": false,
+    "unn": 0.4,
+    "odplywWlk": "NH2",
+    "telemechanika": "przygotowanie"
    }
   }
  ]
