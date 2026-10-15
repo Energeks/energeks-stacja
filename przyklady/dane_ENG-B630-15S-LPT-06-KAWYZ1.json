@@ -1,8 +1,8 @@
 {
  "schemat_danych": "energeks.stacja/0.3",
- "wygenerowano": "2026-10-14",
+ "wygenerowano": "2026-10-15",
  "generator": "0.7",
- "silnik": "0.11.0",
+ "silnik": "0.11.1",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -139,7 +139,7 @@
   },
   {
    "parametr": "SZR",
-   "wartosc": "po stronie nN: transformator i agregat, wyłączniki z napędem (2), blokada mechaniczna i elektryczna"
+   "wartosc": "po stronie nN: transformator i agregat, wyłączniki z napędem (2), blokada mechaniczna i elektryczna, sterownik w szafce na ścianie korytarza obsługi"
   },
   {
    "parametr": "UPS",
@@ -337,7 +337,7 @@
     },
     {
      "parametr": "Wyposażenie",
-     "wartosc": "Sterownik SZR (samoczynne załączanie rezerwy) w polu sterowniczym; przełączanie zasilania transformator i agregat, pomiar napięcia obu źródeł, sygnał startu agregatu"
+     "wartosc": "Sterownik SZR (samoczynne załączanie rezerwy) w szafce sterowniczej na ścianie korytarza obsługi; szafka ok. 600 x 600 x 250 mm poza rozdzielnicą nN (wymiary według wykonawcy rozdzielnicy); przełączanie zasilania transformator i agregat, pomiar napięcia obu źródeł, sygnał startu agregatu"
     },
     {
      "parametr": "Ochrona przepięciowa",
@@ -388,7 +388,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B630-15S-LPT-06-KAWYZ1; cena od 259 900 do 354 400 zł netto"
+     "wartosc": "ENG-B630-15S-LPT-06-KAWYZ1; cena od 260 500 do 355 700 zł netto"
     }
    ]
   }
@@ -518,8 +518,8 @@
      "dobierane_do_mocy": true
     },
     {
-     "nazwa": "Sterownik SZR (samoczynne załączanie rezerwy) w polu sterowniczym",
-     "opis": "przełączanie zasilania transformator i agregat, pomiar napięcia obu źródeł, sygnał startu agregatu",
+     "nazwa": "Sterownik SZR (samoczynne załączanie rezerwy) w szafce sterowniczej na ścianie korytarza obsługi",
+     "opis": "szafka ok. 600 x 600 x 250 mm poza rozdzielnicą nN (wymiary według wykonawcy rozdzielnicy); przełączanie zasilania transformator i agregat, pomiar napięcia obu źródeł, sygnał startu agregatu",
      "dobierane_do_mocy": true
     },
     {
@@ -721,7 +721,7 @@
     "x0": 1530,
     "x1": 1830,
     "y0": 165,
-    "y1": 1865,
+    "y1": 1565,
     "orient": "prost"
    }
   ],
@@ -732,7 +732,7 @@
    }
   ],
   "rnnRzedy": 2,
-  "rnnLen": 1700,
+  "rnnLen": 1400,
   "rsn": {
    "x0": 3047,
    "x1": 4047,
@@ -838,7 +838,7 @@
   },
   {
    "poziom": "info",
-   "tekst": "Obudowa KSW 2,55 x 4,20 m dobrana wstępnie do aparatury: rozdzielnica SN 1,80 m przy ścianie szczytowej, rozdzielnica nN ok. 1,70 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,22 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
+   "tekst": "Obudowa KSW 2,55 x 4,20 m dobrana wstępnie do aparatury: rozdzielnica SN 1,80 m przy ścianie szczytowej, rozdzielnica nN ok. 1,40 m prostopadle przy przegrodzie komory, korytarz obsługi ok. 1,22 m; drzwi transformatora i drzwi obsługi w ścianie frontowej. Ostateczne rozmieszczenie wg projektu."
   }
  ],
  "normy": [
@@ -973,11 +973,11 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.1",
-  "cennik_data": "2026-10-14",
-  "od_pln": 259900,
-  "do_pln": 354400,
-  "opis": "Cena orientacyjna: od 259 900 zł do 354 400 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+  "cennik": "0.4.2",
+  "cennik_data": "2026-10-15",
+  "od_pln": 260500,
+  "do_pln": 355700,
+  "opis": "Cena orientacyjna: od 260 500 zł do 355 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 259 900 zł do 354 400 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 260 500 zł do 355 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }

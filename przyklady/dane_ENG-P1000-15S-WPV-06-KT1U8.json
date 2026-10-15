@@ -1,8 +1,8 @@
 {
  "schemat_danych": "energeks.stacja/0.3",
- "wygenerowano": "2026-10-14",
+ "wygenerowano": "2026-10-15",
  "generator": "0.7",
- "silnik": "0.11.0",
+ "silnik": "0.11.1",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -927,8 +927,8 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.1",
-  "cennik_data": "2026-10-14",
+  "cennik": "0.4.2",
+  "cennik_data": "2026-10-15",
   "od_pln": 351400,
   "do_pln": 448900,
   "opis": "Cena orientacyjna: od 351 400 zł do 448 900 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."

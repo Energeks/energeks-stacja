@@ -1,6 +1,6 @@
 {
  "schemat_danych": "energeks.stacja.przyklady/0.3",
- "silnik": "0.11.0",
+ "silnik": "0.11.1",
  "przyklady": [
   {
    "kod": "ENG-B630-15S-LPT-06-K",

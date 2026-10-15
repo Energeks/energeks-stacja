@@ -1,6 +1,6 @@
 # Kod i dane stacji SN/nN, format energeks.stacja/0.3
 
-Wersja specyfikacji 0.3 (wydanie 0.3.0), 14.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.11.0. Kody i dane w wersjach 0.1 i 0.2 pozostają ważne (punkt 6).
+Wersja specyfikacji 0.3 (wydanie 0.3.0), 15.10.2026. Silnik referencyjny: kreator stacji Energeks, silnik 0.11.1. Kody i dane w wersjach 0.1 i 0.2 pozostają ważne (punkt 6).
 
 ## 1. Cel i zakres
 

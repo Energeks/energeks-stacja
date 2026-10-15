@@ -1,6 +1,6 @@
 # MV/LV substation code and data, format energeks.stacja/0.3
 
-Specification version 0.3 (release 0.3.0), 14 October 2026. Reference engine: Energeks substation configurator, engine 0.11.0. Codes and data of versions 0.1 and 0.2 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
+Specification version 0.3 (release 0.3.0), 15 October 2026. Reference engine: Energeks substation configurator, engine 0.11.1. Codes and data of versions 0.1 and 0.2 remain valid (section 6). The Polish text (`specyfikacja_pl.md`) prevails in case of doubt.
 
 ## 1. Purpose and scope
 

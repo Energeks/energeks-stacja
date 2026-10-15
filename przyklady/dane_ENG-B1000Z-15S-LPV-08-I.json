@@ -1,8 +1,8 @@
 {
  "schemat_danych": "energeks.stacja/0.3",
- "wygenerowano": "2026-10-14",
+ "wygenerowano": "2026-10-15",
  "generator": "0.7",
- "silnik": "0.11.0",
+ "silnik": "0.11.1",
  "producent": {
   "marka": "Energeks",
   "nazwa": "Transformatory Sp. z o.o.",
@@ -320,7 +320,7 @@
     },
     {
      "parametr": "Numer katalogowy",
-     "wartosc": "ENG-B1000Z-15S-LPV-08-I; cena od 241 700 do 295 700 zł netto"
+     "wartosc": "ENG-B1000Z-15S-LPV-08-I; cena od 237 300 do 287 500 zł netto"
     }
    ]
   }
@@ -855,11 +855,11 @@
   "waluta": "PLN",
   "netto": true,
   "transport_w_cenie": true,
-  "cennik": "0.4.1",
-  "cennik_data": "2026-10-14",
-  "od_pln": 241700,
-  "do_pln": 295700,
-  "opis": "Cena orientacyjna: od 241 700 zł do 295 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+  "cennik": "0.4.2",
+  "cennik_data": "2026-10-15",
+  "od_pln": 237300,
+  "do_pln": 287500,
+  "opis": "Cena orientacyjna: od 237 300 zł do 287 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
  },
- "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 241 700 zł do 295 700 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
+ "zastrzezenie": "Konfiguracja poglądowa, do potwierdzenia w ofercie i projekcie. Cena orientacyjna: od 237 300 zł do 287 500 zł netto, z transportem w Polsce. Dokładną cenę podamy w ofercie."
 }

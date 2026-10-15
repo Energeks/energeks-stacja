@@ -4,7 +4,7 @@ English: [README_EN.md](README_EN.md).
 
 Jeden krótki kod, np. `ENG-B630-15S-LPT-06-K`, opisuje całą stację transformatorową SN/nN: linię (kontenerowa, dla e-mobilności, słupowa, dla fotowoltaiki), moc, napięcie, pola rozdzielnicy SN, odpływy nN, opcje i standard operatora sieci. Ten sam kod działa w adresie strony, w ofercie, w przetargu, w dokumentach i w programach. Dane konfiguracji w JSON (`energeks.stacja/0.3`) niosą parametry, obliczenia, wyposażenie, normy i dokumenty.
 
-Wydanie 0.3.0 (14.10.2026), silnik referencyjny 0.11.0. Historia: [CHANGELOG.md](CHANGELOG.md).
+Wydanie 0.3.0 (15.10.2026), silnik referencyjny 0.11.1. Historia: [CHANGELOG.md](CHANGELOG.md).
 
 ## Zawartość
 

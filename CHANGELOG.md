@@ -2,14 +2,15 @@
 
 English summary at the end of each entry.
 
-## 0.3.0 (14.10.2026)
+## 0.3.0 (15.10.2026)
 
-- Format `energeks.stacja/0.3`, silnik referencyjny 0.11.0 (kreator 1.10). Każdy kod 0.2 i 0.1 pozostaje ważny i ma ten sam zapis; schematy 0.2 i 0.1 zostają w repozytorium.
+- Format `energeks.stacja/0.3`, silnik referencyjny 0.11.1 (kreator 1.10). Każdy kod 0.2 i 0.1 pozostaje ważny i ma ten sam zapis; schematy 0.2 i 0.1 zostają w repozytorium.
 - Kod: moc dowolna od 25 kVA (liczba całkowita w zakresie linii; poza typoszeregiem transformator na zamówienie), odpływy `01` do `24`, opcje `I` (stacja wnętrzowa bez obudowy, na początku), `Y` (UPS, po `X`), `Z1`, `Z2`, `Z3` (SZR, po telemechanice) oraz `U5`, `U69`, `U10` (strona nN 0,5, 0,69 i 1,0 kV; `U8` także poza linią P). Nowe wyrażenie regularne w `schemat/kod.regex.txt`, poprzednie w `schemat/kod-0.2.regex.txt`.
 - Parametry wejściowe: `ups`, `szr`, `obudowa` (`brak`); `moc` i `odplywy` jako zakres zamiast listy; `unn` 0,4, 0,5, 0,69, 0,8 albo 1.
 - Silnik 0.11.0 przyjmuje wymiary aparatury z kart katalogowych (pola SN z wyłącznikiem 750 mm, rozdzielnica nN do 630 kVA co najmniej 1100 mm, transformator 2000 kVA z wymiarami): dla części kodów z polami `W` albo `V` i przy mocy do 630 kVA zmienia się dobrana obudowa albo jej opis, kod i aparatura zostają te same.
-- Przykłady: 40 kodów (było 32), dane siedmiu stacji (było cztery) wygenerowane silnikiem 0.11.0.
-- EN: format `energeks.stacja/0.3`, reference engine 0.11.0; every 0.2 and 0.1 code stays valid. Code: any transformer power from 25 kVA, 01 to 24 feeders, options `I` (indoor without enclosure, first), `Y` (UPS), `Z1` to `Z3` (automatic transfer switching) and `U5`, `U69`, `U10` (LV 0.5, 0.69, 1.0 kV; `U8` also outside line P). New input fields `ups`, `szr`, `obudowa`. Equipment dimensions from catalogue data may change the selected enclosure for some codes with circuit-breaker panels and up to 630 kVA; code and equipment stay the same.
+- Silnik 0.11.1 (15.10.2026): przy obsłudze wewnętrznej sterownik SZR po stronie nN (`Z1`, `Z2`) w szafce na ścianie korytarza, bez pola sterowniczego w rozdzielnicy nN, więc obudowa jak dla tego samego kodu bez SZR; przy obsłudze zewnętrznej pole sterownicze 300 mm jak dotąd (przy `Z2` w sekcji 1). Domyślny rodzaj pola transformatorowego, gdy wejście go nie podaje: przy 15 i 20 kV w liniach B i E rozłącznik z bezpiecznikami (`T`) do 1250 kVA włącznie, wyłącznik (`V`) powyżej; w linii P wyłącznik od 1000 kVA; przy 6 i 10 kV bez zmian. Każdy kod zapisuje pole jawnie, więc kody i ich znaczenie się nie zmieniają.
+- Przykłady: 40 kodów (było 32), dane siedmiu stacji (było cztery) wygenerowane silnikiem 0.11.1 (cena według cennika Energeks 0.4.2).
+- EN: format `energeks.stacja/0.3`, reference engine 0.11.1; every 0.2 and 0.1 code stays valid. Engine 0.11.1: with indoor operation the LV transfer-switch controller (`Z1`, `Z2`) sits in a wall cabinet in the operating corridor, so the enclosure is the same as for the code without it; default transformer panel when the input omits it: fuse-switch (`T`) up to 1250 kVA at 15 and 20 kV (lines B and E), circuit breaker (`V`) above, line P breaker from 1000 kVA; codes always state the panel, so their meaning is unchanged. Code: any transformer power from 25 kVA, 01 to 24 feeders, options `I` (indoor without enclosure, first), `Y` (UPS), `Z1` to `Z3` (automatic transfer switching) and `U5`, `U69`, `U10` (LV 0.5, 0.69, 1.0 kV; `U8` also outside line P). New input fields `ups`, `szr`, `obudowa`. Equipment dimensions from catalogue data may change the selected enclosure for some codes with circuit-breaker panels and up to 630 kVA; code and equipment stay the same.
 
 ## 0.2.1 (14.10.2026)
 
